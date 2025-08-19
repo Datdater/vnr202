@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f6f2; /* light parchment */
+  --foreground: #2d2d2d; /* charcoal */
+  --brown: #7c5c37;
+  --gold: #bfa76a;
+  --charcoal: #2d2d2d;
+  --grey: #888888;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-serif: var(--font-merriweather), 'Merriweather', Georgia, 'Times New Roman', serif;
+  --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  --font-mono: var(--font-geist-mono), 'Courier New', Courier, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* HTMLFlipBook Custom Styles */
+.my-flipbook {
+  margin: 0 auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.my-flipbook .page {
+  background: white;
+  border: 1px solid #e5e5e5;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+  font-family: var(--font-serif);
+  line-height: 1.6;
+  color: var(--charcoal);
+}
+
+.my-flipbook .page.cover {
+  background: linear-gradient(135deg, var(--gold) 0%, #f4e4a6 50%, var(--gold) 100%);
+  border: 4px solid var(--brown);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.my-flipbook .page.cover h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--charcoal);
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: var(--font-serif);
+}
+
+.my-flipbook .page.cover h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+  font-family: var(--font-serif);
+}
+
+.my-flipbook .page.cover p {
+  font-size: 1.2rem;
+  color: var(--brown);
+  font-style: italic;
+  margin-bottom: 1rem;
+  font-family: var(--font-serif);
+}
+
+.my-flipbook .page h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--brown);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--gold);
+  font-family: var(--font-serif);
+}
+
+.my-flipbook .page p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  text-align: justify;
+  font-family: var(--font-serif);
+}
+
+.my-flipbook .page img {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.my-flipbook .page img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .my-flipbook .page.cover h1 {
+    font-size: 1.8rem;
+  }
+  
+  .my-flipbook .page.cover h2 {
+    font-size: 1.5rem;
+  }
+  
+  .my-flipbook .page h2 {
+    font-size: 1.3rem;
+  }
+  
+  .my-flipbook .page p {
+    font-size: 0.9rem;
+  }
+}
