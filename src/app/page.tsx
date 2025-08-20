@@ -18,6 +18,8 @@ import {
   ChartOptions,
 } from 'chart.js';
 
+import IntroductionSection from "./components/IntroductionSection";
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -134,6 +136,7 @@ const NavigationButtons = ({ currentSection, totalSections, onNext, onPrev }: {
     </div>
   );
 };
+import MusicPlayer from "./components/MusicLayout";
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState(0);
@@ -296,14 +299,11 @@ export default function Home() {
     <div className="min-h-screen bg-[color:var(--background)] text-[color:var(--charcoal)] font-serif">
       {/* Hiệu ứng vàng rơi */}
       <GoldParticles />
+        {/* Button play music */}
+      <div className="fixed bottom-8 right-8 z-50">
+        <MusicPlayer />
+      </div>
 
-      {/* Navigation Buttons */}
-      <NavigationButtons
-        currentSection={currentSection}
-        totalSections={sections.length}
-        onNext={handleNext}
-        onPrev={handlePrev}
-      />
 
       {/* Hero Section */}
       <motion.section
@@ -315,72 +315,16 @@ export default function Home() {
         className="w-full h-[60vh] min-h-[1000px] flex flex-col items-center justify-center text-center relative"
         style={{
           backgroundImage:
-            "url('https://hair-salon-fpt.io.vn/uploads/090e2710-c384-4ed7-8410-2f60e198d355_Gemini_Generated_Image_354s6e354s6e354s.jpeg')",
+            "url('/z6532323989797_8b93df5887273a64128e7dfb06d0c8a5-1.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black/50" aria-hidden />
-        <div className="relative z-10 flex flex-col items-center justify-center h-full">
-          <h1 className="text-4xl sm:text-6xl font-extrabold uppercase text-white tracking-widest drop-shadow-lg mb-4">
-            GIÁ TRỊ THẶNG DƯ
-          </h1>
-          <p className="text-lg sm:text-2xl text-white/90 max-w-2xl mb-8 drop-shadow">
-            Giá trị thặng dư trong nền kinh tế thị trường
-          </p>
-          <a
-            href="#introduction"
-            className="bg-[color:var(--gold)] text-[color:var(--charcoal)] font-bold px-8 py-3 rounded-full shadow-lg text-lg hover:bg-yellow-600 transition"
-          >
-            Explore Theory
-          </a>
-        </div>
+
       </motion.section>
 
       {/* Introduction Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-        viewport={{ once: true, amount: 0.2 }}
-        id="introduction"
-        className="max-w-5xl mx-auto py-16 px-4"
-      >
-        <div className="text-center mb-6">
-          <h2 className="text-xl sm:text-2xl font-bold text-[color:var(--brown)]">Tiền trong lưu thông hàng hóa</h2>
-        </div>
-        <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
-          <div className="flex flex-row gap-8 flex-1 justify-center w-full">
-            {/* Ảnh 1 */}
-            <div className="flex flex-col items-center">
-              <Image
-                src="https://hair-salon-fpt.io.vn/uploads/1a398d1c-8aad-4ac6-b439-0332546b28e2_Gemini_Generated_Image_9fofra9fofra9fof.jpeg"
-                alt="Ảnh phụ Marx"
-                width={500}
-                height={500}
-                className="rounded-xl shadow-2xl object-cover border-4 border-[color:var(--gold)] bg-white"
-              />
-              <p className="mt-2 text-sm text-center text-[color:var(--charcoal)] font-medium">
-                Lưu thông trong hàng hóa giản đơn
-              </p>
-            </div>
-
-            {/* Ảnh 2 */}
-            <div className="flex flex-col items-center">
-              <Image
-                src="https://hair-salon-fpt.io.vn/uploads/04877f64-bea3-4fdc-9f95-4bbf87fe3b13_Gemini_Generated_Image_1w34k21w34k21w34%20(1).jpg"
-                alt="Ảnh nhà máy cũ"
-                width={500}
-                height={500}
-                className="rounded-full shadow-2xl object-cover"
-              />
-              <p className="mt-2 text-sm text-center text-[color:var(--charcoal)] font-medium">
-                Lưu thông trong tư bản
-              </p>
-            </div>
-          </div>
-        </div>
-      </motion.section>
+    <IntroductionSection />
 
       {/* Labor Power as Commodity Section */}
       <motion.section
