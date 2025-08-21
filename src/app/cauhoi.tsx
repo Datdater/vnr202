@@ -374,9 +374,9 @@ const SurplusValueQuizBook = () => {
           startPage={0}
         >
           {/* Bìa sách */}
-          <div className="page cover bg-white border-4 border-red-800">
+          <div className="page cover  ">
             <img
-              src="https://bcp.cdnchinhphu.vn/334894974524682240/2024/5/7/img4642-1715051700376553325153.jpg"
+              src="https://baodongnai.com.vn/file/e7837c02876411cd0187645a2551379f/032024/screenshot_2024-03-13_at_18-26-51_chien_thang_dien_bien_phu_-_ban_anh_hung_ca_bat_diet_cua_thoi_dai_ho_chi_minh_20240313182808.png"
               alt="Cover"
               className="w-full h-full object-cover"
             />
