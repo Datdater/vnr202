@@ -17,6 +17,9 @@ import {
   ChartData,
   ChartOptions,
 } from 'chart.js';
+import KetQuaPage from "./ketquapage";
+import HistoricalSignificance from "./ynghia";
+import Footer from "./Footer";
 
 ChartJS.register(
   CategoryScale,
@@ -421,99 +424,7 @@ export default function Home() {
       </motion.section>
 
       {/* Production Process Section */}
-      <motion.section
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
-        viewport={{ once: true, amount: 0.2 }}
-        id="production-process"
-        className="max-w-5xl mx-auto py-16 px-4"
-      >
-        <h2 className="text-2xl sm:text-3xl font-bold mb-10 text-[color:var(--brown)] text-center">
-          Quá trình sản xuất giá trị thặng dư trong ngày làm việc của lập trình viên
-        </h2>
-        {/* Timeline 8 tiếng */}
-        <div className="flex flex-col items-center mb-10">
-          <div className="relative w-full max-w-lg">
-            <div className="flex h-15 rounded-full overflow-hidden shadow border border-[color:var(--gold)]">
-              <div className="flex-1 flex items-center justify-center bg-gradient-to-r from-[color:var(--gold)] to-yellow-200 text-[color:var(--charcoal)] font-bold text-sm">
-                <span className="flex items-center gap-2">
-                  <svg className="w-5 h-10 text-[color:var(--charcoal)]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3"></path><circle cx="12" cy="12" r="10"></circle></svg>
-                  4h tất yếu<br />(1.000.000 VNĐ)
-                </span>
-              </div>
-              <div className="flex-1 flex items-center justify-center bg-gradient-to-r from-[color:var(--brown)] to-yellow-900 text-white font-bold text-sm">
-                <span className="flex items-center gap-2">
-                  <svg className="w-5 h-10 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3"></path><circle cx="12" cy="12" r="10"></circle></svg>
-                  4h thặng dư<br />(1.000.000 VNĐ)
-                </span>
-              </div>
-            </div>
-            <div className="flex w-full justify-between mt-2 text-xs text-[color:var(--charcoal)]">
-              <span>0h</span>
-              <span>8h</span>
-            </div>
-          </div>
-          <div className="mt-4 text-center text-base text-[color:var(--charcoal)]">
-            <b>4 giờ lao động tất yếu:</b> Tạo ra giá trị bù đắp lương (1.000.000 VNĐ).<br />
-            <b>4 giờ lao động thặng dư:</b> Tạo ra giá trị thặng dư cho công ty (1.000.000 VNĐ).
-          </div>
-        </div>
-        {/* Bảng phân tích giá trị sản phẩm */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-10">
-          <div className="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-[color:var(--charcoal)] flex flex-col items-center">
-            <div className="font-bold text-[color:var(--charcoal)]">Tư bản bất biến (c)</div>
-            <div className="text-xl font-bold text-[color:var(--brown)]">850.000 VNĐ</div>
-            <div className="text-xs text-[color:var(--grey)] mt-1">Thiết bị, phần mềm, chi phí văn phòng</div>
-          </div>
-          <div className="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-[color:var(--gold)] flex flex-col items-center">
-            <div className="font-bold text-[color:var(--charcoal)]">Giá trị sức lao động (v)</div>
-            <div className="text-xl font-bold text-[color:var(--gold)]">1.000.000 VNĐ</div>
-            <div className="text-xs text-[color:var(--grey)] mt-1">Tiền lương (4h tất yếu)</div>
-          </div>
-          <div className="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-[color:var(--brown)] flex flex-col items-center">
-            <div className="font-bold text-[color:var(--charcoal)]">Giá trị thặng dư (m)</div>
-            <div className="text-xl font-bold text-[color:var(--brown)]">1.000.000 VNĐ</div>
-            <div className="text-xs text-[color:var(--grey)] mt-1">Tạo ra trong 4h thặng dư</div>
-          </div>
-          <div className="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-[color:var(--gold)] flex flex-col items-center">
-            <div className="font-bold text-[color:var(--charcoal)]">Tổng giá trị sản phẩm</div>
-            <div className="text-xl font-bold text-[color:var(--gold)]">2.850.000 VNĐ</div>
-            <div className="text-xs text-[color:var(--grey)] mt-1">c + v + m</div>
-          </div>
-        </div>
-        {/* Nhấn mạnh giá trị thặng dư */}
-        <div className="text-center my-8">
-          <span className="inline-block bg-gradient-to-r from-[color:var(--brown)] to-[color:var(--gold)] text-white font-bold text-lg rounded-full px-8 py-3 shadow-lg border-2 border-white">
-            Giá trị thặng dư (m) được tạo ra là: 1.000.000 VNĐ
-          </span>
-        </div>
-        {/* Mô tả ý nghĩa */}
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500 p-8 rounded-2xl shadow-lg">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-              </div>
-              <div>
-                <h4 className="font-bold text-[color:var(--brown)] text-lg mb-3">Kết luận quan trọng</h4>
-                <blockquote className="text-lg text-[color:var(--charcoal)] italic leading-relaxed mb-4">
-                  Giá trị thặng dư là bộ phận giá trị mới dôi ra ngoài giá trị sức lao động do công nhân tạo ra, là kết quả của lao động không công của công nhân cho nhà tư bản.
-                </blockquote>
-                {/* <div className="text-right">
-                  <span className="text-sm font-semibold text-[color:var(--brown)]">- C. Mác</span>
-                </div> */}
-                {/* <p className="text-[color:var(--charcoal)] mt-4 leading-relaxed">
-                  Phần giá trị thặng dư này là nguồn gốc lợi nhuận của chủ doanh nghiệp, được tạo ra từ phần lao động không được trả công của lập trình viên. 
-                  Điều này cho thấy bản chất của quan hệ sản xuất tư bản chủ nghĩa.
-                </p> */}
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.section>
+      
 
 
       {/* Question Answer Section */}
@@ -523,51 +434,19 @@ export default function Home() {
         transition={{ duration: 0.7, ease: "easeOut", delay: 0.6 }}
         viewport={{ once: true, amount: 0.2 }}
         id="question-answer"
-        className="max-w-3xl mx-auto py-16 px-4 flex flex-col items-center text-center"
+        className="max-w mx-auto  flex flex-col items-center text-center"
       >
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[color:var(--brown)]">Trả lời câu hỏi</h2>
-        <p className="mb-6 text-lg text-[color:var(--charcoal)]"> Làm 8 tiếng nhưng sống không đủ: Giá trị thặng dư ở đâu?</p>
-        
-        {/* Bảng mức lương tối thiểu vùng 2025 */}
-        <div className="w-full bg-white rounded-xl shadow-lg p-6 mb-8">
-          <Bar data={chartData} options={chartOptions} />
-          <div className="text-xs text-gray-500 mt-2 text-right">Nguồn: Cục Thống kê</div>
-        </div>
-
-        <div className="w-full overflow-x-auto mt-10">
-          <table className="min-w-[600px] w-full border border-gray-300 rounded-xl overflow-hidden shadow-lg bg-white">
-            <thead>
-              <tr className="bg-[color:var(--brown)] text-white">
-                <th className="py-3 px-4 text-base font-bold border-r border-[color:var(--gold)]">Vùng</th>
-                <th className="py-3 px-4 text-base font-bold border-r border-[color:var(--gold)]">Mức lương tối thiểu tháng<br />(đồng/tháng)</th>
-                <th className="py-3 px-4 text-base font-bold">Mức lương tối thiểu giờ<br />(đồng/giờ)</th>
-              </tr>
-            </thead>
-            <tbody className="text-center text-[color:var(--charcoal)]">
-              <tr className="border-t border-gray-200">
-                <td className="py-2 px-4 font-semibold">Vùng I</td>
-                <td className="py-2 px-4">4.960.000</td>
-                <td className="py-2 px-4">23.800</td>
-              </tr>
-              <tr className="border-t border-gray-200">
-                <td className="py-2 px-4 font-semibold">Vùng II</td>
-                <td className="py-2 px-4">4.410.000</td>
-                <td className="py-2 px-4">21.200</td>
-              </tr>
-              <tr className="border-t border-gray-200">
-                <td className="py-2 px-4 font-semibold">Vùng III</td>
-                <td className="py-2 px-4">3.860.000</td>
-                <td className="py-2 px-4">18.600</td>
-              </tr>
-              <tr className="border-t border-gray-200">
-                <td className="py-2 px-4 font-semibold">Vùng IV</td>
-                <td className="py-2 px-4">3.450.000</td>
-                <td className="py-2 px-4">16.600</td>
-              </tr>
-            </tbody>
-          </table>
-          <div className="text-xs text-gray-500 mt-2">Nguồn: Dự thảo mức lương tối thiểu vùng năm 2025</div>
-        </div>
+        <KetQuaPage/>
+      </motion.section>
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
+        viewport={{ once: true, amount: 0.2 }}
+        id="production-process"
+        className="max-w mx-auto relative"
+      >
+        <HistoricalSignificance/>
       </motion.section>
 
       {/* Book Section */}
@@ -1028,29 +907,14 @@ export default function Home() {
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: "easeOut", delay: 0.5 }}
+        transition={{ duration: 0.7, ease: "easeOut", delay: 0.6 }}
         viewport={{ once: true, amount: 0.2 }}
-        className="w-full py-16 bg-gradient-to-r from-[color:var(--brown)]/90 to-[color:var(--gold)]/80 flex flex-col items-center justify-center text-center"
+        id="question-answer"
+        // className="max-w mx-auto  flex flex-col items-center text-center"
       >
-        <h3 className="text-3xl sm:text-4xl font-extrabold text-white mb-6 drop-shadow-lg">Sẵn sàng để tìm hiểu sâu hơn?</h3>
-        <p className="text-lg text-white/90 mb-8 max-w-2xl">
-          Khám phá lý thuyết giá trị thặng dư và tham gia thảo luận để hiểu cơ sở của kinh tế hiện đại.
-        </p>
-        <div className="flex gap-4 flex-wrap justify-center">
-          <a
-            href="#"
-            className="bg-white text-[color:var(--brown)] font-bold px-8 py-3 rounded-full shadow-lg text-lg hover:bg-gray-200 transition"
-          >
-            Read Full Theory
-          </a>
-          <a
-            href="#"
-            className="bg-[color:var(--charcoal)] text-white font-bold px-8 py-3 rounded-full shadow-lg text-lg hover:bg-gray-800 transition"
-          >
-            Join Discussion
-          </a>
-        </div>
+        <Footer/>
       </motion.section>
+      
     </div>
   );
 }
