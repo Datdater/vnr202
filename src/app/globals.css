@@ -114,6 +114,7 @@ body {
   transform: scale(1.02);
 }
 
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .my-flipbook .page.cover h1 {
@@ -130,5 +131,23 @@ body {
   
   .my-flipbook .page p {
     font-size: 0.9rem;
+  }
+}
+/*marquee style with css */
+.animate-scroll{
+  display: flex;
+  gap: 1.5rem;
+  animation: scroll 10s linear infinite; 
+}
+.animate-scroll:hover{
+  animation-play-state: paused;
+}
+
+@keyframes scroll{
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }

@@ -21,6 +21,8 @@ import VerticalTimeline1 from "./components/VerticalTimeline";
 import PreprationPhase from "./components/PreprationPhase/PreprationPhase";
 import SketchfabEmbed from "./components/SketchfabEmbed";
 
+import IntroductionSection from "./components/IntroductionSection";
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -144,6 +146,7 @@ const NavigationButtons = ({
     </div>
   );
 };
+import MusicPlayer from "./components/MusicLayout";
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState(0);
@@ -335,14 +338,11 @@ export default function Home() {
     <div className="min-h-screen bg-[color:var(--background)] text-[color:var(--charcoal)] font-serif">
       {/* Hiệu ứng vàng rơi */}
       <GoldParticles />
+        {/* Button play music */}
+      <div className="fixed bottom-8 right-8 z-50">
+        <MusicPlayer />
+      </div>
 
-      {/* Navigation Buttons */}
-      <NavigationButtons
-        currentSection={currentSection}
-        totalSections={sections.length}
-        onNext={handleNext}
-        onPrev={handlePrev}
-      />
 
       {/* Hero Section */}
       <motion.section
@@ -354,29 +354,16 @@ export default function Home() {
         className="w-full h-[60vh] min-h-[1000px] flex flex-col items-center justify-center text-center relative"
         style={{
           backgroundImage:
-            "url('https://hair-salon-fpt.io.vn/uploads/090e2710-c384-4ed7-8410-2f60e198d355_Gemini_Generated_Image_354s6e354s6e354s.jpeg')",
+            "url('/z6532323989797_8b93df5887273a64128e7dfb06d0c8a5-1.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black/50" aria-hidden />
-        <div className="relative z-10 flex flex-col items-center justify-center h-full">
-          <h1 className="text-4xl sm:text-6xl font-extrabold uppercase text-white tracking-widest drop-shadow-lg mb-4">
-            GIÁ TRỊ THẶNG DƯ
-          </h1>
-          <p className="text-lg sm:text-2xl text-white/90 max-w-2xl mb-8 drop-shadow">
-            Giá trị thặng dư trong nền kinh tế thị trường
-          </p>
-          <a
-            href="#introduction"
-            className="bg-[color:var(--gold)] text-[color:var(--charcoal)] font-bold px-8 py-3 rounded-full shadow-lg text-lg hover:bg-yellow-600 transition"
-          >
-            Explore Theory
-          </a>
-        </div>
+
       </motion.section>
 
       {/* Introduction Section */}
+    <IntroductionSection />
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
