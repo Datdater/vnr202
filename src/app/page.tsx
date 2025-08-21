@@ -19,6 +19,7 @@ import {
 } from "chart.js";
 import VerticalTimeline1 from "./components/VerticalTimeline";
 import PreprationPhase from "./components/PreprationPhase/PreprationPhase";
+import SketchfabEmbed from "./components/SketchfabEmbed";
 
 ChartJS.register(
   CategoryScale,
@@ -1254,7 +1255,7 @@ export default function Home() {
           </HTMLFlipBook>
         </div>
       </motion.section>
-
+      <SketchfabEmbed />
       {/* Final Call-to-Action Section */}
       <motion.section
         initial={{ opacity: 0, y: 40 }}

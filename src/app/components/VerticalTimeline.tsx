@@ -229,7 +229,7 @@ function VerticalTimeline1() {
 
             <div className="mt-3 relative w-full">
               <Image
-                src="https://en.nhandan.vn/megastory/2024/dbp/images/1603.jpg"
+                src="https://en.nhandan.vn/megastory/2024/dbp/images/3003.jpg"
                 alt="Dien Bien Phu Campaign"
                 width={600}
                 height={400}
@@ -306,12 +306,133 @@ function VerticalTimeline1() {
             </h1>
             <div className="mt-3 w-ful">
               <Image
-                src="https://en.nhandan.vn/megastory/2024/dbp/images/3003.jpg"
+                src="https://en.nhandan.vn/megastory/2024/dbp/images/0105.jpg"
                 alt="Dien Bien Phu Campaign"
                 width={600}
                 height={400}
                 className="rounded-lg grayscale object-contain"
               />
+            </div>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{
+              background: "rgba(0, 0, 0, 0.8)",
+              color: "#fff",
+              boxShadow: "0 3px 0 #EAB308",
+            }}
+            contentArrowStyle={{ borderRight: "7px solid rgba(0, 0, 0, 0.8)" }}
+            date="Đêm 1/5/1954"
+            dateClassName="text-white font-bold text-lg -mt-2"
+            iconStyle={{
+              background: "#EAB308",
+              color: "#fff",
+              boxShadow: "0 0 0 2px #EAB308",
+              width: "30px",
+              height: "30px",
+              marginLeft: "-15px",
+            }}
+          >
+            <h1 className="text-lg sm:text-xl font-semibold text-white">
+              Ta nổ súng mở màn đợt 3, tấn công đồng loạt các cứ điểm.
+            </h1>
+
+            <div className="mt-3 relative w-full">
+              <Image
+                src="https://en.nhandan.vn/megastory/2024/dbp/images/0205a.jpg"
+                alt="Dien Bien Phu Campaign"
+                width={600}
+                height={400}
+                className="rounded-lg grayscale object-contain"
+              />
+            </div>
+
+            {/* Xem chi tiết button */}
+            <div className="mt-4 flex justify-end">
+              <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-4 py-2 rounded-lg shadow">
+                Xem chi tiết
+              </button>
+            </div>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{
+              background: "rgba(0, 0, 0, 0.8)",
+              color: "#fff",
+              boxShadow: "0 3px 0 #EAB308",
+            }}
+            contentArrowStyle={{ borderRight: "7px solid rgba(0, 0, 0, 0.8)" }}
+            date="Đêm 6/5 rạng 7/5/1954"
+            dateClassName="text-white font-bold text-lg -mt-2"
+            iconStyle={{
+              background: "#EAB308",
+              color: "#fff",
+              boxShadow: "0 0 0 2px #EAB308",
+              width: "30px",
+              height: "30px",
+              marginLeft: "-15px",
+            }}
+          >
+            <h1 className="text-lg sm:text-xl font-semibold text-white">
+              Quân ta đánh trận quyết định ở đồi A1:
+            </h1>
+
+            <div className="mt-3 relative w-full">
+              <Image
+                src="https://en.nhandan.vn/megastory/2024/dbp/images/0605.jpg"
+                alt="Dien Bien Phu Campaign"
+                width={600}
+                height={400}
+                className="rounded-lg grayscale object-contain"
+              />
+            </div>
+
+            {/* Xem chi tiết button */}
+            <div className="mt-4 flex justify-end">
+              <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-4 py-2 rounded-lg shadow">
+                Xem chi tiết
+              </button>
+            </div>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{
+              background: "rgba(0, 0, 0, 0.8)",
+              color: "#fff",
+              boxShadow: "0 3px 0 #EAB308",
+            }}
+            contentArrowStyle={{ borderRight: "7px solid rgba(0, 0, 0, 0.8)" }}
+            date="7/5/1954"
+            dateClassName="text-white font-bold text-lg -mt-2"
+            iconStyle={{
+              background: "#EAB308",
+              color: "#fff",
+              boxShadow: "0 0 0 2px #EAB308",
+              width: "30px",
+              height: "30px",
+              marginLeft: "-15px",
+            }}
+          >
+            <h1 className="text-lg sm:text-xl font-semibold text-white">
+              Quân ta tiến công trên toàn mặt trận, bao vây và đánh thẳng vào sở
+              chỉ huy Mường Thanh.
+            </h1>
+
+            <div className="mt-3 relative w-full">
+              <Image
+                src="https://en.nhandan.vn/megastory/2024/dbp/images/0705.jpg"
+                alt="Dien Bien Phu Campaign"
+                width={600}
+                height={400}
+                className="rounded-lg grayscale object-contain"
+              />
+            </div>
+
+            {/* Xem chi tiết button */}
+            <div className="mt-4 flex justify-end">
+              <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-4 py-2 rounded-lg shadow">
+                Xem chi tiết
+              </button>
             </div>
           </VerticalTimelineElement>
         </VerticalTimeline>
