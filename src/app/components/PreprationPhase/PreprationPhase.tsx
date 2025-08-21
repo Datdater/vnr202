@@ -5,10 +5,22 @@ import { useEffect, useState } from "react";
 function PreprationPhase() {
   return (
     <>
-      <div className="max-w-5xl mx-auto py-16 px-4">
+      <div className="max-w-7xl mx-auto py-16 px-4">
         <div className="text-center mb-6">
-          <h2 className="text-xl sm:text-2xl font-bold text-white">
-            Công tác chuẩn bị cho Chiến dịch Điện Biên Phủ
+          <h2
+            className="text-xl sm:text-2xl font-bold text-white"
+            style={{
+              fontFamily: "var(--font-family-brand)",
+              color: "var(--gray-white, #fff)",
+              textShadow: "5px 5px 0 rgba(0,0,0,.15)",
+              fontSize: "100px",
+              fontWeight: 900,
+              lineHeight: "130%",
+              textTransform: "uppercase",
+              textAlign: "center",
+            }}
+          >
+            Công tác chuẩn bị
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
@@ -24,7 +36,14 @@ function PreprationPhase() {
                 className="w-10 h-10 object-cover ml-2"
               />
             </div>
-            <div className="bg-red-100 text-gray-900 p-6 space-y-3 flex-1 flex flex-col">
+            <div
+              className="bg-red-100 bg-cover  text-gray-900 p-6 space-y-3 flex-1 flex flex-col"
+              style={{
+                backgroundImage: `url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Vietnam_map.png/408px-Vietnam_map.png)`,
+                backgroundColor: "rgba(0, 0, 0, 0.4)",
+                backgroundBlendMode: "overlay",
+              }}
+            >
               <ul className="space-y-3 flex-1">
                 <li className="bg-red-200 p-2 rounded shadow flex items-center gap-2">
                   <img src="/infantry.png" alt="icon" className="w-15 h-15" />3
@@ -79,8 +98,14 @@ function PreprationPhase() {
               />
               <span className="flex-1 text-center">Lực lượng Quân Pháp</span>
             </div>
-            <div className="bg-blue-100 text-gray-900 p-6 space-y-3 flex-1 flex flex-col">
-              <ul className="space-y-3 flex-1">
+<div
+              className="bg-red-100 bg-cover  text-gray-900 p-6 space-y-3 flex-1 flex flex-col"
+              style={{
+                backgroundImage: `url(https://freepngimg.com/thumb/map/173746-map-region-picture-france-png-file-hd.png)`,
+                backgroundColor: "rgba(0, 0, 0, 0.4)",
+                backgroundBlendMode: "overlay",
+              }}
+            >              <ul className="space-y-3 flex-1">
                 <li className="bg-blue-200 p-2 rounded shadow flex items-center gap-2">
                   <img src="/infantry.png" alt="icon" className="w-15 h-15" />
                   12 Tiểu đoàn

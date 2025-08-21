@@ -16,10 +16,20 @@ function VerticalTimeline1() {
           "url('https://imgnvsk.vnanet.vn/MediaUpload/Content/2024/03/13/313-14-29-10-921-518-13-14-30-7.jpg')",
       }}
     >
-      <div className="bg-black/40 w-full h-full">
+      <div className="bg-black/40 w-full h-full mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-6">
-          <h2 className="text-xl sm:text-2xl font-bold text-white">
-            Diễn biến Chiến dịch (56 ngày đêm){" "}
+          <h2 className="text-xl sm:text-2xl font-bold text-white"
+          style={{
+              fontFamily: "var(--font-family-brand)",
+              color: "var(--gray-white, #fff)",
+              textShadow: "5px 5px 0 rgba(0,0,0,.15)",
+              fontSize: "100px",
+              fontWeight: 900,
+              lineHeight: "130%",
+              textTransform: "uppercase",
+              textAlign: "center",
+            }}>
+            Diễn biến Chiến dịch
           </h2>
         </div>
         <VerticalTimeline lineColor="#bfa76a">
