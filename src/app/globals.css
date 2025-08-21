@@ -33,6 +33,48 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Utility: hide scrollbars for scrollable tablist */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Dialog content defaults */
+.dialog-content p {
+  margin-bottom: 0.75rem;
+  line-height: 1.75;
+}
+.dialog-content img, .dialog-content figure {
+  border-radius: 0.75rem;
+}
+
+/* Auto split layout for tab content blocks: text left, media right */
+.dialog-content > div.space-y-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .dialog-content > div.space-y-3 {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: start;
+  }
+  /* Assume the last child is media (Image/figure), pin it to the right */
+  .dialog-content > div.space-y-3 > :last-child {
+    grid-column: 2 / 3;
+    position: sticky;
+    top: 0.5rem;
+  }
+  /* All other children flow in the left column */
+  .dialog-content > div.space-y-3 > :not(:last-child) {
+    grid-column: 1 / 2;
+  }
+}
+
 /* HTMLFlipBook Custom Styles */
 .my-flipbook {
   margin: 0 auto;
