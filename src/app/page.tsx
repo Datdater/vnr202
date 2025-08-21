@@ -1,9 +1,9 @@
-'use client'
+"use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import HTMLFlipBook from 'react-pageflip';
-import { Bar } from 'react-chartjs-2';
+import HTMLFlipBook from "react-pageflip";
+import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -16,7 +16,12 @@ import {
   Tooltip,
   ChartData,
   ChartOptions,
-} from 'chart.js';
+} from "chart.js";
+import VerticalTimeline1 from "./components/VerticalTimeline";
+import PreprationPhase from "./components/PreprationPhase/PreprationPhase";
+import SketchfabEmbed from "./components/SketchfabEmbed";
+
+import IntroductionSection from "./components/IntroductionSection";
 import KetQuaPage from "./ketquapage";
 import HistoricalSignificance from "./ynghia";
 import Footer from "./Footer";
@@ -35,14 +40,16 @@ ChartJS.register(
 
 // Component hiệu ứng vàng rơi
 const GoldParticles = () => {
-  const [particles, setParticles] = useState<Array<{
-    id: number;
-    x: number;
-    y: number;
-    size: number;
-    speed: number;
-    delay: number;
-  }>>([]);
+  const [particles, setParticles] = useState<
+    Array<{
+      id: number;
+      x: number;
+      y: number;
+      size: number;
+      speed: number;
+      delay: number;
+    }>
+  >([]);
 
   useEffect(() => {
     const generateParticles = () => {
@@ -94,7 +101,12 @@ const GoldParticles = () => {
 };
 
 // Component Navigation Buttons
-const NavigationButtons = ({ currentSection, totalSections, onNext, onPrev }: {
+const NavigationButtons = ({
+  currentSection,
+  totalSections,
+  onNext,
+  onPrev,
+}: {
   currentSection: number;
   totalSections: number;
   onNext: () => void;
@@ -109,19 +121,19 @@ const NavigationButtons = ({ currentSection, totalSections, onNext, onPrev }: {
         disabled={currentSection === 0}
         className={`px-6 py-3 rounded-full shadow-lg font-bold transition-all ${
           currentSection === 0
-            ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-            : 'bg-[color:var(--brown)] text-white hover:bg-[color:var(--charcoal)]'
+            ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+            : "bg-[color:var(--brown)] text-white hover:bg-[color:var(--charcoal)]"
         }`}
       >
         ← Trước
       </motion.button>
-      
+
       <div className="flex items-center px-4 bg-white/90 backdrop-blur-sm rounded-full shadow-lg">
         <span className="text-[color:var(--brown)] font-bold">
           {currentSection + 1} / {totalSections}
         </span>
       </div>
-      
+
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
@@ -129,8 +141,8 @@ const NavigationButtons = ({ currentSection, totalSections, onNext, onPrev }: {
         disabled={currentSection === totalSections - 1}
         className={`px-6 py-3 rounded-full shadow-lg font-bold transition-all ${
           currentSection === totalSections - 1
-            ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-            : 'bg-[color:var(--gold)] text-[color:var(--charcoal)] hover:bg-yellow-400'
+            ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+            : "bg-[color:var(--gold)] text-[color:var(--charcoal)] hover:bg-yellow-400"
         }`}
       >
         Tiếp →
@@ -138,46 +150,46 @@ const NavigationButtons = ({ currentSection, totalSections, onNext, onPrev }: {
     </div>
   );
 };
+import MusicPlayer from "./components/MusicLayout";
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState(0);
   const [isManualScrolling, setIsManualScrolling] = useState(false);
-  
+
   const sections = [
     // Section 0: Hero Section
     {
-      id: 'hero',
-      title: 'Hero'
+      id: "hero",
+      title: "Hero",
     },
-    
+
     // Section 1: Introduction Section
     {
-      id: 'introduction',
-      title: 'Nguồn gốc'
+      id: "introduction",
+      title: "Nguồn gốc",
     },
-    
+
     // Section 2: Labor Power as Commodity Section
     {
-      id: 'labor-power',
-      title: 'Sức lao động'
+      id: "labor-power",
+      title: "Sức lao động",
     },
-    
+
     // Section 3: Production Process Section
     {
-      id: 'production-process',
-      title: 'Quá trình sản xuất'
+      id: "production-process",
+      title: "Quá trình sản xuất",
     },
-    
-    
+
     // Section 5: Question Answer Section
     {
-      id: 'question-answer',
-      title: 'Trả lời câu hỏi'
+      id: "question-answer",
+      title: "Trả lời câu hỏi",
     },
     {
-      id: 'summary',
-      title: 'Tóm tắt toàn bộ Lý thuyết Giá trị Thặng dư'
-    }
+      id: "summary",
+      title: "Tóm tắt toàn bộ Lý thuyết Giá trị Thặng dư",
+    },
   ];
 
   const handleNext = () => {
@@ -185,9 +197,14 @@ export default function Home() {
       const nextSection = currentSection + 1;
       setCurrentSection(nextSection);
       setIsManualScrolling(true);
-      const nextSectionElement = document.getElementById(sections[nextSection].id);
+      const nextSectionElement = document.getElementById(
+        sections[nextSection].id
+      );
       if (nextSectionElement) {
-        nextSectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        nextSectionElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
         setTimeout(() => setIsManualScrolling(false), 600);
       } else {
         setIsManualScrolling(false);
@@ -200,9 +217,14 @@ export default function Home() {
       const prevSection = currentSection - 1;
       setCurrentSection(prevSection);
       setIsManualScrolling(true);
-      const prevSectionElement = document.getElementById(sections[prevSection].id);
+      const prevSectionElement = document.getElementById(
+        sections[prevSection].id
+      );
       if (prevSectionElement) {
-        prevSectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        prevSectionElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
         setTimeout(() => setIsManualScrolling(false), 600);
       } else {
         setIsManualScrolling(false);
@@ -213,17 +235,17 @@ export default function Home() {
   // Keyboard navigation
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
-      if (event.key === 'ArrowRight' || event.key === ' ') {
+      if (event.key === "ArrowRight" || event.key === " ") {
         event.preventDefault();
         handleNext();
-      } else if (event.key === 'ArrowLeft') {
+      } else if (event.key === "ArrowLeft") {
         event.preventDefault();
         handlePrev();
       }
     };
 
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
+    window.addEventListener("keydown", handleKeyPress);
+    return () => window.removeEventListener("keydown", handleKeyPress);
   }, [currentSection]);
 
   // Update current section based on scroll position
@@ -240,74 +262,91 @@ export default function Home() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [isManualScrolling]);
 
-  const chartData: ChartData<'bar'> = {
+  const chartData: ChartData<"bar"> = {
     labels: [
-      '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
     ],
     datasets: [
       {
-        type: 'bar',
-        label: 'Năng suất lao động (triệu đồng/người)',
-        data: [55.8, 70, 78.8, 85.2, 93.1, 97.7, 105.7, 117.2, 129.1, 141, 150.1, 173, 188.7, 199.3, 221.9],
-        backgroundColor: 'rgba(54, 162, 235, 0.7)',
+        type: "bar",
+        label: "Năng suất lao động (triệu đồng/người)",
+        data: [
+          55.8, 70, 78.8, 85.2, 93.1, 97.7, 105.7, 117.2, 129.1, 141, 150.1,
+          173, 188.7, 199.3, 221.9,
+        ],
+        backgroundColor: "rgba(54, 162, 235, 0.7)",
         borderRadius: 6,
-        yAxisID: 'y',
+        yAxisID: "y",
       },
       {
-        type: 'bar',
-        label: 'Tỷ lệ lao động qua đào tạo (%)',
-        data: [14.6, 15.4, 16.5, 17.9, 18.3, 20.1, 20.5, 21.3, 21.9, 22.6, 25, 26.1, 26.3, 27.1, 28.3],
-        borderColor: 'orange',
-        backgroundColor: 'orange',
-        yAxisID: 'y1',
+        type: "bar",
+        label: "Tỷ lệ lao động qua đào tạo (%)",
+        data: [
+          14.6, 15.4, 16.5, 17.9, 18.3, 20.1, 20.5, 21.3, 21.9, 22.6, 25, 26.1,
+          26.3, 27.1, 28.3,
+        ],
+        borderColor: "orange",
+        backgroundColor: "orange",
+        yAxisID: "y1",
         order: 2,
-      }
-    ]
+      },
+    ],
   };
 
-  const chartOptions: ChartOptions<'bar'> = {
+  const chartOptions: ChartOptions<"bar"> = {
     responsive: true,
     plugins: {
-      legend: { position: 'top' },
+      legend: { position: "top" },
       title: {
         display: true,
-        text: 'Năng suất lao động và tỷ lệ lao động qua đào tạo ở Việt Nam (2010-2024)',
-        font: { size: 18 }
-      }
+        text: "Năng suất lao động và tỷ lệ lao động qua đào tạo ở Việt Nam (2010-2024)",
+        font: { size: 18 },
+      },
     },
     scales: {
       y: {
-        type: 'linear',
-        position: 'left',
-        title: { display: true, text: 'Triệu đồng/người' }
+        type: "linear",
+        position: "left",
+        title: { display: true, text: "Triệu đồng/người" },
       },
       y1: {
-        type: 'linear',
-        position: 'right',
+        type: "linear",
+        position: "right",
         grid: { drawOnChartArea: false },
-        title: { display: true, text: 'Tỷ lệ (%)' },
+        title: { display: true, text: "Tỷ lệ (%)" },
         min: 0,
-        max: 30
-      }
-    }
+        max: 30,
+      },
+    },
   };
 
   return (
     <div className="min-h-screen bg-[color:var(--background)] text-[color:var(--charcoal)] font-serif">
       {/* Hiệu ứng vàng rơi */}
       <GoldParticles />
+        {/* Button play music */}
+      <div className="fixed bottom-8 right-8 z-50">
+        <MusicPlayer />
+      </div>
 
-      {/* Navigation Buttons */}
-      <NavigationButtons
-        currentSection={currentSection}
-        totalSections={sections.length}
-        onNext={handleNext}
-        onPrev={handlePrev}
-      />
 
       {/* Hero Section */}
       <motion.section
@@ -319,75 +358,39 @@ export default function Home() {
         className="w-full h-[60vh] min-h-[1000px] flex flex-col items-center justify-center text-center relative"
         style={{
           backgroundImage:
-            "url('https://hair-salon-fpt.io.vn/uploads/090e2710-c384-4ed7-8410-2f60e198d355_Gemini_Generated_Image_354s6e354s6e354s.jpeg')",
+            "url('/z6532323989797_8b93df5887273a64128e7dfb06d0c8a5-1.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-black/50" aria-hidden />
-        <div className="relative z-10 flex flex-col items-center justify-center h-full">
-          <h1 className="text-4xl sm:text-6xl font-extrabold uppercase text-white tracking-widest drop-shadow-lg mb-4">
-            GIÁ TRỊ THẶNG DƯ
-          </h1>
-          <p className="text-lg sm:text-2xl text-white/90 max-w-2xl mb-8 drop-shadow">
-            Giá trị thặng dư trong nền kinh tế thị trường
-          </p>
-          <a
-            href="#introduction"
-            className="bg-[color:var(--gold)] text-[color:var(--charcoal)] font-bold px-8 py-3 rounded-full shadow-lg text-lg hover:bg-yellow-600 transition"
-          >
-            Explore Theory
-          </a>
-        </div>
+
       </motion.section>
 
       {/* Introduction Section */}
+    <IntroductionSection />
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
         viewport={{ once: true, amount: 0.2 }}
         id="introduction"
-        className="max-w-5xl mx-auto py-16 px-4"
+        className="w-full min-h-screen relative bg-fixed bg-center bg-cover"
+        style={{
+          backgroundImage:
+            "url('https://file.qdnd.vn/data/old_img/vanphong/2012/12/10/8719788820121210181817918.jpg')",
+        }}
       >
-        <div className="text-center mb-6">
-          <h2 className="text-xl sm:text-2xl font-bold text-[color:var(--brown)]">Tiền trong lưu thông hàng hóa</h2>
-        </div>
-        <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
-          <div className="flex flex-row gap-8 flex-1 justify-center w-full">
-            {/* Ảnh 1 */}
-            <div className="flex flex-col items-center">
-              <Image
-                src="https://hair-salon-fpt.io.vn/uploads/1a398d1c-8aad-4ac6-b439-0332546b28e2_Gemini_Generated_Image_9fofra9fofra9fof.jpeg"
-                alt="Ảnh phụ Marx"
-                width={500}
-                height={500}
-                className="rounded-xl shadow-2xl object-cover border-4 border-[color:var(--gold)] bg-white"
-              />
-              <p className="mt-2 text-sm text-center text-[color:var(--charcoal)] font-medium">
-                Lưu thông trong hàng hóa giản đơn
-              </p>
-            </div>
+        {/* dark overlay for readability */}
+        <div className="absolute inset-0 bg-black/50"></div>
 
-            {/* Ảnh 2 */}
-            <div className="flex flex-col items-center">
-              <Image
-                src="https://hair-salon-fpt.io.vn/uploads/04877f64-bea3-4fdc-9f95-4bbf87fe3b13_Gemini_Generated_Image_1w34k21w34k21w34%20(1).jpg"
-                alt="Ảnh nhà máy cũ"
-                width={500}
-                height={500}
-                className="rounded-full shadow-2xl object-cover"
-              />
-              <p className="mt-2 text-sm text-center text-[color:var(--charcoal)] font-medium">
-                Lưu thông trong tư bản
-              </p>
-            </div>
-          </div>
+        {/* content above overlay */}
+        <div className="relative z-10">
+          <PreprationPhase />
         </div>
       </motion.section>
 
       {/* Labor Power as Commodity Section */}
-      <motion.section
+      {/* <motion.section
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
@@ -395,34 +398,10 @@ export default function Home() {
         id="labor-power"
         className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 py-16 px-4"
       >
-        <div className="flex-1 min-w-[250px]">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-[color:var(--brown)]">Hàng hóa Sức Lao động – Chìa khóa của Giá trị Thặng dư</h2>
-          <ul className="list-disc pl-5 space-y-2 text-lg text-[color:var(--charcoal)]">
-            <li><b>Khái niệm:</b> Sức lao động là toàn bộ năng lực thể chất và tinh thần của con người dùng để sản xuất ra giá trị sử dụng.</li>
-            <li><b>Tại sao sức lao động trở thành hàng hóa?</b>
-              <ul className="list-[circle] pl-6 mt-1 text-base">
-                <li>Người lao động tự do về thân thể.</li>
-                <li>Người lao động không có tư liệu sản xuất để tự làm ra sản phẩm.</li>
-              </ul>
-            </li>
-            <li><b>Thuộc tính đặc biệt của hàng hóa Sức lao động:</b>
-              <ul className="list-[circle] pl-6 mt-1 text-base">
-                <li><b>Giá trị của sức lao động:</b> Được quyết định bởi chi phí để tái sản xuất ra sức lao động (ăn uống, ở, học hành, nuôi con...).</li>
-                <li><b>Giá trị sử dụng của sức lao động:</b> <span className="text-[color:var(--gold)] font-bold">Là khả năng tạo ra một giá trị mới lớn hơn giá trị bản thân nó.</span> <span className="italic">Đây chính là điều đặc biệt, là &apos;bí mật&apos; của giá trị thặng dư.</span></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div className="flex-1 min-w-[250px] flex justify-center">
-          <Image
-            src="https://hair-salon-fpt.io.vn/uploads/5c3644d7-d191-412b-84d2-826dbe2fa471_Gemini_Generated_Image_msjl61msjl61msjl.jpeg"
-            alt="Sức lao động icon"
-            width={500}
-            height={350}
-            className="rounded-full bg-[color:var(--gold)]/20 p-6 shadow-lg"
-          />
-        </div>
-      </motion.section>
+        
+      </motion.section> */}
+
+      <VerticalTimeline1 />
 
       {/* Production Process Section */}
       
@@ -462,7 +441,7 @@ export default function Home() {
         <SurplusValueQuizBook/>
         
       </motion.section>
-
+      <SketchfabEmbed />
       {/* Final Call-to-Action Section */}
       <motion.section
         initial={{ opacity: 0, y: 40 }}
