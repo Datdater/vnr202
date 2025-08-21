@@ -1,4 +1,9 @@
 import React, { useState } from "react";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import DialogTitle from "@mui/material/DialogTitle";
+import IconButton from "@mui/material/IconButton";
+import { CircleMinus, ClosedCaptionIcon, DoorClosed } from "lucide-react";
 
 // Types
 type DetailItem = {
@@ -26,7 +31,7 @@ const data: CardItem[] = [
       "20–22/11/1953: Nhảy dù 6 tiểu đoàn (~4.500 quân) xuống Điện Biên Phủ",
       "3/12/1953: Chấp nhận giao chiến tại Điện Biên Phủ",
       "7/12/1953: Đại tá De Castries chỉ huy tập đoàn cứ điểm",
-      "15/12/1953: Quân số tăng lên 11 tiểu đoàn"
+      "15/12/1953: Quân số tăng lên 11 tiểu đoàn",
     ],
     details: [
       {
@@ -48,10 +53,12 @@ Sau khi nghiên cứu thực trạng chiến trường Đông Dương và căn c
 Như vậy, điểm mấu chốt trong kế hoạch của tướng Na va là tập trung được một lực lượng cơ động ưu thế hơn đối phương, sau khi giải quyết chiến trường phía Nam, sẽ thực hành tiến công ở phía Bắc, tạo ra tình hình quân sự có lợi làm cơ sở cho giải pháp chính trị kết thúc chiến tranh. Đó là chiến lược có qui mô rộng lớn, thực hiện tập trung sự cố gắng lớn và cuối cùng của Pháp trong cuộc chiến tranh xâm lược Đông Dương.
 
 Để thực hiện kế hoạch trên, tướng Na va tập trung xây dựng 27 Binh đoàn cơ động GM (Groupement mobile) cho toàn chiến trường Đông Dương. Riêng ở Bắc Bộ, Pháp có 44 tiểu đoàn cơ động. Tuy nhiên, hậu quả của việc rút quân về xây dựng khối quân cơ động khiến lực lượng quân sự Pháp - Ngụy ở các chiến trường trở nên mỏng, yếu không yểm trợ được cho nhau khi bị tấn công trên toàn các chiến trường.
-
     `,
         sources: [
-          { label: "Nguồn tham khảo", url: "https://baotanglichsu.vn/vi/Articles/3097/13850/ke-hoach-na-va-va-chien-cuc-djong-xuan-1953-1954.html" },
+          {
+            label: "Nguồn tham khảo",
+            url: "https://baotanglichsu.vn/vi/Articles/3097/13850/ke-hoach-na-va-va-chien-cuc-djong-xuan-1953-1954.html",
+          },
         ],
       },
     ],
@@ -74,16 +81,18 @@ Như vậy, điểm mấu chốt trong kế hoạch của tướng Na va là t�
         Bộ Chính trị khẳng định kế hoạch Na va tuy có thể gây cho kháng chiến những khó khăn mới, nhưng bản thân nó là một sản phẩm bị động, nên chứa nhiều mâu thuẫn và có nhiều nhược điểm không thể khắc phục được. Hội nghị xác định phương châm chiến lược là “tích cực, chủ động, cơ động, linh hoạt với quyết tâm giữ vững quyền chủ động đánh địch trên cả hai mặt trận chính diện và sau lưng địch, phối hợp trên phạm vi cả nước và phối hợp trên phạm vi toàn Đông Dương”. Chủ trương tác chiến của bộ đội ta trong chiến cục Đông Xuân 1953 - 1954 là sử dụng một bộ phận chủ lực mở những cuộc tiến công vào hướng quân Pháp sơ hở, đồng thời bằng đánh vận động tranh thủ cơ hội tiêu diệt sinh lực địch khi quân Pháp đánh sâu vào vùng tự do. Điểm mấu chốt của chiến lược là tập trung nỗ lực tìm cách phân tán các binh đoàn cơ động chiến lược của Pháp vừa được tổ chức, xây dựng.
         <img src="/cuo_hop_1954.gif" alt="Chủ tịch Hồ Chí Minh và Bộ chính trị họp bàn chủ trương tác chiến Đông Xuân 1953-1954." className="w-full h-56 object-cover rounded-lg mb-4" />
         Chủ tịch Hồ Chí Minh và Bộ chính trị họp bàn chủ trương tác chiến Đông Xuân 1953-1954.
-        Thực hiện chủ trương trên, bộ đội chủ lực của ta đã mở các chiến dịch với mục đích bắt buộc quân Pháp phải phân tán lực lượng ra khắp chiến trường Đông Dương. Đó là: giải phóng Lai Châu (10/12/1953), tiến công chiến lược Trung Hạ Lào (từ 21/12/1953 đến 31/1/1954), tiến công chiến lược ở Thượng Lào (từ 26/1 đến 10/2/1954), tiến công chiến lược Bắc Tây Nguyên (từ 27/1 đến 5/2/1954) và đánh địch ngay sau lưng chúng ở đồng bằng Bắc Bộ, Bình Trị Thiên, Nam Trung Bộ, Nam Bộ.
+        Thực hiện chủ trương trên, bộ đội chủ lực của ta đã mở các chiến dịch với mục đích bắt buộc quân Pháp phải phân tán lực lượng ra khắp chiến trường Đông Dương. Đó là: giải phóng Lai Châu (10/12/1953), tiến công chiến lược Trung Hạ Lào (từ 21/12/1953 đến 31/1/1954), tiến công chiến lược ở Thượng Lào (từ 26/1 đến 10/2/1954), tiến công chiến lược Bắc Tây Nguyên (từ 27/1 đến 5/2/1954), và đánh địch ngay sau lưng chúng ở đồng bằng Bắc Bộ, Bình Trị Thiên, Nam Trung Bộ, Nam Bộ.
         <img src="/mang_den.gif" alt="Măng Đen" className="w-full h-56 object-cover rounded-lg mb-4" />
-        Quân ta đánh chiếm căn cứ Măng Đen (Kon Tum) trong chiến dịch) bắc Tây Nguyên
-                   (tháng 1-2/1954)
+        Quân ta đánh chiếm căn cứ Măng Đen (Kon Tum) trong chiến dịch bắc Tây Nguyên (tháng 1-2/1954)
         Ngoài ra, nhận thức rõ vị trí chiến lược của miền Tây Bắc, nơi có thể phát huy sở trường tác chiến của ta, trung tuần tháng 11/1953, đại đoàn 316 (thiếu trung đoàn 176) được phái lên Tây Bắc. Đây là một đòn điểm trúng “huyệt hiểm” của Pháp. Bởi với họ, địa danh Điện Biên Phủ - Tây Bắc “là một vị trí chiến lược quan trọng chẳng những đối với chiến trường Đông Dương, mà còn đối với khu vực Đông Nam Á”, và là “một bàn xoay có thể xoay đi bốn phía Việt Nam, Lào, Mianma, Trung Quốc, và là chiếc chìa khóa bảo vệ Thượng Lào” (Na va: Đông Dương hấp hối, Nxb Plông, Pari 1958), từ đó đánh chiếm lại các vùng đã mất ở Tây Bắc trong những năm 1950-1953 và tạo điều kiện để đánh tiêu diệt quân chủ lực của Việt Minh tại đây. Pháp cấp tốc cho 6 tiểu đoàn nhảy dù xuống chiếm đóng Điện Biên Phủ vào các ngày 20,21,22/11/1953, khi đại đoàn 316 của ta đang trên đường hành quân lên Lai Châu. Nhờ có sự giúp đỡ của Mỹ, thực dân Pháp đã xây dựng Điện Biên Phủ thành một tập đoàn cứ điểm mạnh nhất Đông Dương, thành trung tâm điểm của kế hoạch Na va. Các đơn vị tinh nhuệ nhất của Pháp được điều động lên đây, cùng với nhiều loại vũ khí hiện đại được bố trí gồm 49 cứ điểm chia làm ba khu: khu trung tâm Mường Thanh có chỉ huy sở, nhiều trung tâm đề kháng, nhiều cứ điểm bao quanh sân bay; khu Bắc có 3 trung tâm đề kháng là Him Lam, Độc Lập, Bản Kéo và khu Nam có trung tâm đề kháng Hồng Cúm. Thực dân Pháp tuyên bố Điện Biên Phủ là “pháo đài bất khả xâm phạm” và thách thức quân ta tấn công.
         <img src="/HimLam.gif" alt="Him Lam, Điện Biên Phủ, 3/1954." className="w-full h-56 object-cover rounded-lg mb-4" />
         Như vậy, với các đòn tấn công dồn dập của quân đội ta trên khắp các chiến trường trong chiến cục Đông Xuân 1953-1954, đã đẩy quân Pháp vào thế bị động, bắt buộc Na va và quân đội Pháp phải chấp nhận phân tán lực lượng để đối phó, làm thất bại âm mưu tập trung khối cơ động chiến lược của chúng, tạo điều kiện cho bộ đội ta tác chiến các chiến dịch có qui mô lớn, mà đỉnh cao là trận quyết chiến chiến lược tiêu diệt Tập đoàn cứ điểm Điện Biên Phủ (từ 13/3 đến 7/5/1954), làm phá sản hoàn toàn kế hoạch Na va, kết thúc thắng lợi cuộc kháng chiến trường kỳ 9 năm chống thực dân Pháp xâm lược của nhân dân Việt Nam.
         `,
         sources: [
-          { label: "Nguồn tham khảo", url: "https://baotanglichsu.vn/vi/Articles/3097/13850/ke-hoach-na-va-va-chien-cuc-djong-xuan-1953-1954.html" },
+          {
+            label: "Nguồn tham khảo",
+            url: "https://baotanglichsu.vn/vi/Articles/3097/13850/ke-hoach-na-va-va-chien-cuc-djong-xuan-1953-1954.html",
+          },
         ],
       },
     ],
@@ -96,45 +105,115 @@ const IntroductionSection: React.FC = () => {
   const [selectedCard, setSelectedCard] = useState<CardItem | null>(null);
   const [isSpeaking, setIsSpeaking] = useState(false);
 
-  // Thêm hàm đọc văn bản bằng AI (Web Speech API)
-const speakText = (text: string) => {
-  if ('speechSynthesis' in window) {
-      const voices = window.speechSynthesis.getVoices();
+  // Hàm đọc văn bản bằng Web Speech API
+  // Hàm đọc văn bản bằng Web Speech API
+  const speakText = (text: string) => {
+    if ("speechSynthesis" in window) {
+      // Đợi voices load xong
+      const loadVoices = () => {
+        const voices = window.speechSynthesis.getVoices();
+        console.log("Tất cả giọng có sẵn:", voices.map(v => `${v.name} (${v.lang})`));
+        
+        // Tìm giọng tiếng Việt theo thứ tự ưu tiên
+        let selectedVoice = null;
+        
+        // Ưu tiên 1: Giọng vi-VN
+        selectedVoice = voices.find(voice => voice.lang === "vi-VN") || null;
+        
+        // Ưu tiên 2: Giọng vi (nếu không có vi-VN)
+        if (!selectedVoice) {
+          selectedVoice = voices.find(voice => voice.lang.startsWith("vi")) || null;
+        }
+        
+        // Ưu tiên 3: Giọng có tên chứa "Vietnamese"
+        if (!selectedVoice) {
+          selectedVoice = voices.find(voice => 
+            voice.name.toLowerCase().includes("vietnamese") ||
+            voice.name.toLowerCase().includes("vietnam")
+          ) || null;
+        }
+        
+        console.log("Giọng được chọn:", selectedVoice);
+        
+        const utter = new window.SpeechSynthesisUtterance(text);
+        utter.lang = "vi-VN";
+        utter.rate = 0.8; // Tăng tốc độ một chút
+        utter.pitch = 1.0; // Giọng tự nhiên hơn
+        utter.volume = 0.9;
+        
+        // Gán giọng nếu tìm được
+        if (selectedVoice) {
+          utter.voice = selectedVoice;
+        }
+        
+        utter.onend = () => setIsSpeaking(false);
+        utter.onstart = () => setIsSpeaking(true);
+        utter.onerror = (event) => {
+          console.error("Lỗi text-to-speech:", event.error);
+          setIsSpeaking(false);
+          alert("Không thể đọc văn bản. Vui lòng thử lại.");
+        };
+        
+        window.speechSynthesis.speak(utter);
+      };
+      
+      // Kiểm tra xem voices đã load chưa
+      if (window.speechSynthesis.getVoices().length > 0) {
+        loadVoices();
+      } else {
+        // Đợi voices load xong
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+      }
+    } else {
+      alert("Trình duyệt của bạn không hỗ trợ tính năng đọc văn bản.");
+    }
+  };
 
-          const vietnameseVoices = voices.filter(voice => voice.lang === 'vi-VN');
-    console.log("Các giọng có sẵn:", vietnameseVoices);
-    const utter = new window.SpeechSynthesisUtterance(text);
-    utter.lang = 'vi-VN';
-    utter.rate = 0.75;
-    utter.pitch = 0.5; // Tùy chỉnh cao độ nếu cần
-    utter.onend = () => setIsSpeaking(false);
-    utter.onstart = () => setIsSpeaking(true);
-    window.speechSynthesis.speak(utter);
-  }
-};
+  // Hàm dừng đọc văn bản
+  const stopSpeaking = () => {
+    if ("speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
+      setIsSpeaking(false);
+    }
+  };
 
-// Method to stop reading text
-const stopSpeaking = () => {
-  if ('speechSynthesis' in window) {
-    window.speechSynthesis.cancel();
-    setIsSpeaking(false);
-  }
-};
+  // Hàm đóng Dialog
+  const handleClose = () => {
+    setSelectedCard(null);
+    stopSpeaking(); // Dừng giọng nói khi đóng dialog
+  };
 
   return (
     <section
-      className="max-w-6xl mx-auto py-12 px-4 bg-[#fdf6e3]"
-      style={{ fontFamily: "'Special Elite', cursive" }}
+      className="max-w mx-auto py-12 px-4 bg-[#fdf6e3] min-h-screen bg-cover bg-center bg-fixed font-sans"
+      style={{
+        backgroundImage: `url(https://nghiavuquansu.vn/wp-content/uploads/2025/02/chien-dich-dien-bien-phu-1954.jpg)`,
+        backgroundColor: "rgba(0, 0, 0, 0.4)",
+        backgroundBlendMode: "overlay",
+      }}
     >
+
       {/* Tiêu đề */}
       <div className="text-center mb-8">
-        <h2 className="text-2xl sm:text-3xl font-bold text-[#3a3a3a] uppercase tracking-widest">
-          Chiến Dịch Điện Biên Phủ (1953 – 1954)
+        <h2
+          className="text-2xl lg:text-3xl font-bold text-[#3a3a3a] uppercase tracking-widest"
+          style={{
+            fontFamily: "var(--font-family-brand)",
+            color: "var(--gray-white, #fff)",
+            textShadow: "5px 5px 0 rgba(0,0,0,.15)",
+            fontSize: "100px",
+            fontWeight: 900,
+            lineHeight: "130%",
+            textTransform: "uppercase",
+            textAlign: "center",
+          }}
+        >
+          Bối cảnh
         </h2>
       </div>
 
       {/* Cards */}
-      <div className="grid sm:grid-cols-2 gap-8">
+      <div className="grid lg:grid-cols-2 gap-8">
         {data.map((item) => (
           <div
             key={item.id}
@@ -142,7 +221,16 @@ const stopSpeaking = () => {
             className={`cursor-pointer bg-[#f8f1e4] border-4 border-[#6b4423] rounded-lg shadow-md p-4 flex flex-col hover:brightness-105 transition duration-300`}
           >
             {/* Title */}
-            <h3 className="text-lg font-bold uppercase tracking-wide mb-3 text-[#3a3a3a] text-center">
+            <h3 className="text-lg font-bold uppercase tracking-wide mb-3 text-[#3a3a3a] text-center"
+              style={{ 
+                color: "var(--gray-white, #020202ff)",
+                // textShadow: "5px 5px 0 rgba(0,0,0,.15)",
+                fontSize: "24px",
+                fontWeight: 700,
+                lineHeight: "1.2",
+                textTransform: "uppercase",
+              }}
+              >
               {item.title}
             </h3>
 
@@ -153,13 +241,13 @@ const stopSpeaking = () => {
                 alt={item.title}
                 className="w-full h-full object-cover filter sepia-[0.5] contrast-[1.1] brightness-[0.95]"
               />
-              <span className="absolute top-1 left-1 text-xs bg-[#6b4423] text-white px-2 py-1 rounded-sm">
+              <span className="absolute top-1 left-1 text-xs bg-[#6b4423] text-white px-2 py-1 rounded-lg">
                 1953
               </span>
             </div>
 
             {/* Short description */}
-            <ul className="text-sm text-gray-800 space-y-1 text-left list-disc list-inside">
+            <ul className="text-lg text-gray-800 space-y-1 text-left list-disc list-inside">
               {item.shortDesc.map((desc, idx) => (
                 <li key={idx}>{desc}</li>
               ))}
@@ -168,83 +256,93 @@ const stopSpeaking = () => {
         ))}
       </div>
 
-      {/* Modal */}
-      {selectedCard && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white rounded-2xl shadow-xl max-w-2xl w-full p-6 relative max-h-[90vh] overflow-y-auto">
-            {/* Close */}
-            <button
-              onClick={() => setSelectedCard(null)}
-              className="absolute top-3 right-3 text-gray-500 hover:text-black text-2xl"
-            >
-              &times;
-            </button>
-
-            {/* Image */}
-            <img
-              src={selectedCard.image}
-              alt={selectedCard.title}
-              className="w-full h-56 object-cover rounded-lg mb-4"
-            />
-
-            {/* Title */}
-            <h3 className="text-xl font-bold mb-4 text-center text-gray-800">
-              {selectedCard.title}
-            </h3>
-
-       {/* Nút bật/tắt giọng nói */}
-        <div className="mb-4 flex gap-3">
-          {!isSpeaking ? (
-            <button
-              onClick={() =>
-                speakText(
-                  selectedCard.details
-                    .map((detail) =>
-                      detail.text.replace(/<[^>]+>/g, "").replace(/\s+/g, " ")
-                    )
-                    .join(" ")
-                )
-              }
-              className="px-4 py-2 bg-yellow-400 rounded font-bold text-brown hover:bg-yellow-500 flex items-center gap-2"
-            >
-              🔊 Đọc nội dung
-            </button>
-          ) : (
-            <button
-              onClick={stopSpeaking}
-              className="px-4 py-2 bg-red-400 rounded font-bold text-white hover:bg-red-500 flex items-center gap-2"
-            >
-              ⏹️ Tắt giọng nói
-            </button>
-          )}
-        </div>
-
-            {/* Details */}
-            <div className="text-sm text-gray-700 leading-relaxed whitespace-pre-line break-words">
-              {selectedCard.details.map((detail, i) => (
-                <div key={i} className="mb-6">
-                  <div dangerouslySetInnerHTML={{ __html: detail.text }} />
-                  {detail.sources && detail.sources.length > 0 && (
-                    <div className="mt-2 space-x-2">
-                      {detail.sources.map((s, idx) => (
-                        <a
-                          key={idx}
-                          href={s.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-600 hover:underline"
-                        >
-                          {s.label}
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
+      {/* MUI Dialog */}
+      <Dialog
+        open={!!selectedCard}
+        onClose={handleClose}
+        maxWidth="md"
+        fullWidth
+        PaperProps={{
+          style: {
+            maxHeight: "90vh",
+            overflowY: "auto",
+            borderRadius: "16px",
+            padding: "16px",
+          },
+        }}
+      >
+        <DialogTitle>
+          <div className="flex justify-between items-center">
+            <h2 className="text-xl font-bold text-gray-800">{selectedCard?.title}</h2>
+            <IconButton onClick={handleClose}>
+              <CircleMinus />
+            </IconButton>
           </div>
-        </div>
-      )}
+        </DialogTitle>
+        <DialogContent>
+          {selectedCard && (
+            <>
+              {/* Image */}
+              <img
+                src={selectedCard.image}
+                alt={selectedCard.title}
+                className="w-full h-56 object-cover rounded-lg mb-4"
+              />
+
+              {/* Nút bật/tắt giọng nói */}
+              {/* <div className="mb-4 flex gap-3">
+                {!isSpeaking ? (
+                  <button
+                    onClick={() =>
+                      speakText(
+                        selectedCard.details
+                          .map((detail) =>
+                            detail.text.replace(/<[^>]+>/g, "").replace(/\s+/g, " ")
+                          )
+                          .join(" ")
+                      )
+                    }
+                    className="px-4 py-2 bg-yellow-400 rounded font-bold text-brown hover:bg-yellow-500 flex items-center gap-2"
+                  >
+                    🔊 Đọc nội dung
+                  </button>
+                ) : (
+                  <button
+                    onClick={stopSpeaking}
+                    className="px-4 py-2 bg-red-400 rounded font-bold text-white hover:bg-red-500 flex items-center gap-2"
+                  >
+                    ⏹️ Tắt giọng nói
+                  </button>
+                )}
+              </div> */}
+
+              {/* Details */}
+              <div className="text-lg text-gray-700 leading-relaxed whitespace-pre-line break-words">
+                {selectedCard.details.map((detail, i) => (
+                  <div key={i} className="mb-6">
+                    <div dangerouslySetInnerHTML={{ __html: detail.text }} />
+                    {detail.sources && detail.sources.length > 0 && (
+                      <div className="mt-2 space-x-2">
+                        {detail.sources.map((s, idx) => (
+                          <a
+                            key={idx}
+                            href={s.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline"
+                          >
+                            {s.label}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };

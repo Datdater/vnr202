@@ -218,7 +218,7 @@ const KetQuaPage: React.FC = () => {
 
   return (
     <div
-      className="min-h-screen bg-cover bg-center bg-fixed font-sans"
+      className="min-h-screen max-w mx-auto  flex flex-col items-center text-center bg-cover bg-center bg-fixed font-sans"
       style={{
         backgroundImage: `url(https://dienbienphu-image.nhandan.vn/t1200/Uploaded/uncqrwpjw/chienthangdienbienphuttxvn.jpg)`,
         backgroundColor: "rgba(0, 0, 0, 0.4)",

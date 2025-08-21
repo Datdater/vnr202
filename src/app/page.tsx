@@ -342,11 +342,10 @@ export default function Home() {
     <div className="min-h-screen bg-[color:var(--background)] text-[color:var(--charcoal)] font-serif">
       {/* Hiệu ứng vàng rơi */}
       <GoldParticles />
-        {/* Button play music */}
+      {/* Button play music */}
       <div className="fixed bottom-8 right-8 z-50">
         <MusicPlayer />
       </div>
-
 
       {/* Hero Section */}
       <motion.section
@@ -358,16 +357,63 @@ export default function Home() {
         className="w-full h-[60vh] min-h-[1000px] flex flex-col items-center justify-center text-center relative"
         style={{
           backgroundImage:
-            "url('/z6532323989797_8b93df5887273a64128e7dfb06d0c8a5-1.jpg')",
+            "url('https://media.vov.vn/sites/default/files/styles/large/public/2021-05/299299.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-
+        <div className="absolute inset-0 bg-black/50" aria-hidden />
+        <div className="relative z-10 flex flex-col items-center justify-center h-full">
+          <h1
+            className="text-4xl sm:text-6xl font-extrabold uppercase text-white tracking-widest drop-shadow-lg mb-4"
+            style={{
+              fontFamily: "var(--font-family-brand)",
+              color: "var(--gray-white, #fff)",
+              textShadow: "5px 5px 0 rgba(0,0,0,.15)",
+              fontSize: "100px",
+              fontWeight: 900,
+              lineHeight: "130%",
+              textTransform: "uppercase",
+              textAlign: "center",
+            }}
+          >
+            Chiến thắng
+          </h1>
+          <h1
+            className="text-4xl sm:text-6xl font-extrabold uppercase text-white tracking-widest drop-shadow-lg mb-4"
+            style={{
+              fontFamily: "var(--font-family-brand)",
+              color: "var(--gray-white, #fff)",
+              textShadow: "5px 5px 0 rgba(0,0,0,.15)",
+              fontSize: "150px",
+              fontWeight: 900,
+              lineHeight: "130%",
+              textTransform: "uppercase",
+              textAlign: "center",
+            }}
+          >
+            Điện Biên Phủ
+          </h1>
+          <p
+            className="text-lg sm:text-2xl text-white/90 max-w-2xl mb-8 drop-shadow"
+            style={{
+              fontFamily: "var(--font-family-brand)",
+              color: "var(--gray-white, #fff)",
+              textShadow: "5px 5px 0 rgba(0,0,0,.15)",
+              fontSize: "50px",
+              fontWeight: 500,
+              lineHeight: "10%",
+              textTransform: "uppercase",
+              textAlign: "center",
+            }}
+          >
+            Lừng lẫy năm châu, chấn động địa cầu
+          </p>
+        </div>
       </motion.section>
 
       {/* Introduction Section */}
-    <IntroductionSection />
+      <IntroductionSection />
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -404,8 +450,6 @@ export default function Home() {
       <VerticalTimeline1 />
 
       {/* Production Process Section */}
-      
-
 
       {/* Question Answer Section */}
       <motion.section
@@ -416,7 +460,7 @@ export default function Home() {
         id="question-answer"
         className="max-w mx-auto  flex flex-col items-center text-center"
       >
-        <KetQuaPage/>
+        <KetQuaPage />
       </motion.section>
       <motion.section
         initial={{ opacity: 0, y: 40 }}
@@ -426,7 +470,7 @@ export default function Home() {
         id="production-process"
         className="max-w mx-auto relative"
       >
-        <HistoricalSignificance/>
+        <HistoricalSignificance />
       </motion.section>
 
       {/* Book Section */}
@@ -438,8 +482,7 @@ export default function Home() {
         id="summary"
         className="max-w mx-auto"
       >
-        <SurplusValueQuizBook/>
-        
+        <SurplusValueQuizBook />
       </motion.section>
       <SketchfabEmbed />
       {/* Final Call-to-Action Section */}
@@ -451,9 +494,8 @@ export default function Home() {
         id="question-answer"
         // className="max-w mx-auto  flex flex-col items-center text-center"
       >
-        <Footer/>
+        <Footer />
       </motion.section>
-      
     </div>
   );
 }
