@@ -1,3 +1,14 @@
+// import type { NextConfig } from "next";
+
+// const nextConfig: NextConfig = {
+//   /* config options here */
+//   images: {
+//     domains: ['hair-salon-fpt.io.vn', 'images.unsplash.com'],
+//   },
+// };
+
+// export default nextConfig;
+
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
