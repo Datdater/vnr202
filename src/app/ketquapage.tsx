@@ -499,7 +499,7 @@ const KetQuaPage: React.FC = () => {
                 <thead className="bg-gradient-to-r from-red-600 to-red-800 text-white">
                   <tr>
                     <th className="px-6 py-4 text-left font-bold text-lg md:text-xl">
-                      Loại thiệt hại
+                      {/* Loại thiệt hại */}
                     </th>
                     <th className="px-6 py-4 text-center font-bold text-lg md:text-xl">
                       🇫🇷 Pháp
@@ -634,7 +634,7 @@ const KetQuaPage: React.FC = () => {
         </div> */}
       </div>
       {/* Smooth Transition */}
-      <div className="h-16 bg-gradient-to-b from-transparent  to-black/50"></div>
+      <div className="h-16 bg-gradient-to-b from-transparent  to-black/90"></div>
     </div>
   );
 };

@@ -127,7 +127,7 @@ const HistoricalSignificance = () => {
       }}
     >
       {/* Top blend */}
-      <div className="h-16 bg-gradient-to-b from-black/50 to-transparent absolute top-0 left-0 right-0 z-10"></div>
+      <div className="h-16 bg-gradient-to-b from-black/90 to-transparent absolute top-0 left-0 right-0 z-10"></div>
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <section className="mb-12">
           <div className="max-w-7xl mx-auto">
@@ -369,6 +369,8 @@ const HistoricalSignificance = () => {
           </div>
         </section>
       </div>
+            <div className="h-16 bg-gradient-to-b from-transparent  to-black/90"></div>
+
     </div>
   );
 };
