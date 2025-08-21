@@ -2,8 +2,11 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+
 import HTMLFlipBook from "react-pageflip";
+import DiaglogContentTab from "@/components/DiaglogContentTab";
 import { Bar } from "react-chartjs-2";
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -361,6 +364,7 @@ export default function Home() {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
+
       >
         <div className="absolute inset-0 bg-black/50" aria-hidden />
         <div className="relative z-10 flex flex-col items-center justify-center h-full">
@@ -411,6 +415,9 @@ export default function Home() {
           </p>
         </div>
       </motion.section>
+
+     
+
 
       {/* Introduction Section */}
       <IntroductionSection />
@@ -474,6 +481,7 @@ export default function Home() {
       </motion.section>
 
       {/* Book Section */}
+
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -484,6 +492,9 @@ export default function Home() {
       >
         <SurplusValueQuizBook />
       </motion.section>
+
+
+
       <SketchfabEmbed />
       {/* Final Call-to-Action Section */}
       <motion.section
