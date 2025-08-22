@@ -105,69 +105,16 @@ const IntroductionSection: React.FC = () => {
   const [selectedCard, setSelectedCard] = useState<CardItem | null>(null);
   const [isSpeaking, setIsSpeaking] = useState(false);
 
-  // Hàm đọc văn bản bằng Web Speech API
-  // Hàm đọc văn bản bằng Web Speech API
-  const speakText = (text: string) => {
-    if ("speechSynthesis" in window) {
-      // Đợi voices load xong
-      const loadVoices = () => {
-        const voices = window.speechSynthesis.getVoices();
-        console.log("Tất cả giọng có sẵn:", voices.map(v => `${v.name} (${v.lang})`));
-        
-        // Tìm giọng tiếng Việt theo thứ tự ưu tiên
-        let selectedVoice = null;
-        
-        // Ưu tiên 1: Giọng vi-VN
-        selectedVoice = voices.find(voice => voice.lang === "vi-VN") || null;
-        
-        // Ưu tiên 2: Giọng vi (nếu không có vi-VN)
-        if (!selectedVoice) {
-          selectedVoice = voices.find(voice => voice.lang.startsWith("vi")) || null;
-        }
-        
-        // Ưu tiên 3: Giọng có tên chứa "Vietnamese"
-        if (!selectedVoice) {
-          selectedVoice = voices.find(voice => 
-            voice.name.toLowerCase().includes("vietnamese") ||
-            voice.name.toLowerCase().includes("vietnam")
-          ) || null;
-        }
-        
-        console.log("Giọng được chọn:", selectedVoice);
-        
-        const utter = new window.SpeechSynthesisUtterance(text);
-        utter.lang = "vi-VN";
-        utter.rate = 0.8; // Tăng tốc độ một chút
-        utter.pitch = 1.0; // Giọng tự nhiên hơn
-        utter.volume = 0.9;
-        
-        // Gán giọng nếu tìm được
-        if (selectedVoice) {
-          utter.voice = selectedVoice;
-        }
-        
-        utter.onend = () => setIsSpeaking(false);
-        utter.onstart = () => setIsSpeaking(true);
-        utter.onerror = (event) => {
-          console.error("Lỗi text-to-speech:", event.error);
-          setIsSpeaking(false);
-          alert("Không thể đọc văn bản. Vui lòng thử lại.");
-        };
-        
-        window.speechSynthesis.speak(utter);
-      };
-      
-      // Kiểm tra xem voices đã load chưa
-      if (window.speechSynthesis.getVoices().length > 0) {
-        loadVoices();
-      } else {
-        // Đợi voices load xong
-        window.speechSynthesis.onvoiceschanged = loadVoices;
-      }
-    } else {
-      alert("Trình duyệt của bạn không hỗ trợ tính năng đọc văn bản.");
-    }
-  };
+const speakText = (text: string) => {
+  if ('speechSynthesis' in window) {
+    const utter = new window.SpeechSynthesisUtterance(text);
+    utter.lang = 'vi-VN';
+    utter.rate = 0.7; // thêm tốc độ đọc
+    utter.onend = () => setIsSpeaking(false);
+    utter.onstart = () => setIsSpeaking(true);
+    window.speechSynthesis.speak(utter);
+  }
+};
 
   // Hàm dừng đọc văn bản
   const stopSpeaking = () => {
@@ -225,7 +172,7 @@ const IntroductionSection: React.FC = () => {
               style={{ 
                 color: "var(--gray-white, #020202ff)",
                 // textShadow: "5px 5px 0 rgba(0,0,0,.15)",
-                fontSize: "24px",
+                fontSize: "40px",
                 fontWeight: 700,
                 lineHeight: "1.2",
                 textTransform: "uppercase",
@@ -290,7 +237,7 @@ const IntroductionSection: React.FC = () => {
               />
 
               {/* Nút bật/tắt giọng nói */}
-              {/* <div className="mb-4 flex gap-3">
+               <div className="mb-4 flex gap-3">
                 {!isSpeaking ? (
                   <button
                     onClick={() =>
@@ -314,7 +261,7 @@ const IntroductionSection: React.FC = () => {
                     ⏹️ Tắt giọng nói
                   </button>
                 )}
-              </div> */}
+              </div> 
 
               {/* Details */}
               <div className="text-lg text-gray-700 leading-relaxed whitespace-pre-line break-words">
