@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 const HTMLFlipBook = ({
   children,
-  ...props
 }: {
   children: React.ReactNode;
   [key: string]: unknown;
