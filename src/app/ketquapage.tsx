@@ -41,33 +41,6 @@ const KetQuaPage: React.FC = () => {
     setExpandedCard(expandedCard === index ? null : index);
   };
 
-  const memorialImages = [
-    {
-      src: "https://dienbientv.vn/dataimages/201907/original/images2789103_Ngh_a_trang_A1.jpg",
-      title: "Nghĩa trang A1",
-      description: "Nơi an nghỉ của các anh hùng liệt sĩ",
-    },
-    {
-      src: "https://baodansinh.vn/file/oldimage/baodansinh/UserFiles/image/2014/5/anh12dien.jpg",
-      title: "Nghĩa trang Him Lam",
-      description: "Tưởng nhớ những người con Điện Biên",
-    },
-    {
-      src: "https://image.baophapluat.vn/w840/Uploaded/2024/fsxcqjwpcx/2019_05_05/dien_bien_phu_qmpu.jpg",
-      title: "Nghĩa trang Độc Lập",
-      description: "Nơi yên nghỉ của các liệt sĩ vô danh",
-    },
-    {
-      src: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2019/5/7/717636/Dien-Bien-6.jpg",
-      title: "Lễ tưởng niệm",
-      description: "Lãnh đạo Đảng, Nhà nước đến viếng",
-    },
-    {
-      src: "https://baotintuc.vn/stores/news_dataimages/hungpv/052019/06/20/in_article/5403_6-16_Dien_Bien_Phu.jpg",
-      title: "Nghĩa trang liệt sĩ",
-      description: "Những ngôi mộ thiêng liêng",
-    },
-  ];
 
 
   const images: ImageData[] = [

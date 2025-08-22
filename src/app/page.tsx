@@ -98,55 +98,55 @@ const GoldParticles = () => {
 };
 
 // Component Navigation Buttons
-const NavigationButtons = ({
-  currentSection,
-  totalSections,
-  onNext,
-  onPrev,
-}: {
-  currentSection: number;
-  totalSections: number;
-  onNext: () => void;
-  onPrev: () => void;
-}) => {
-  return (
-    <div className="fixed bottom-8 right-8 z-50 flex gap-4">
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        onClick={onPrev}
-        disabled={currentSection === 0}
-        className={`px-6 py-3 rounded-full shadow-lg font-bold transition-all ${
-          currentSection === 0
-            ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-            : "bg-[color:var(--brown)] text-white hover:bg-[color:var(--charcoal)]"
-        }`}
-      >
-        ← Trước
-      </motion.button>
+// const NavigationButtons = ({
+//   currentSection,
+//   totalSections,
+//   onNext,
+//   onPrev,
+// }: {
+//   currentSection: number;
+//   totalSections: number;
+//   onNext: () => void;
+//   onPrev: () => void;
+// }) => {
+//   return (
+//     <div className="fixed bottom-8 right-8 z-50 flex gap-4">
+//       <motion.button
+//         whileHover={{ scale: 1.1 }}
+//         whileTap={{ scale: 0.9 }}
+//         onClick={onPrev}
+//         disabled={currentSection === 0}
+//         className={`px-6 py-3 rounded-full shadow-lg font-bold transition-all ${
+//           currentSection === 0
+//             ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+//             : "bg-[color:var(--brown)] text-white hover:bg-[color:var(--charcoal)]"
+//         }`}
+//       >
+//         ← Trước
+//       </motion.button>
 
-      <div className="flex items-center px-4 bg-white/90 backdrop-blur-sm rounded-full shadow-lg">
-        <span className="text-[color:var(--brown)] font-bold">
-          {currentSection + 1} / {totalSections}
-        </span>
-      </div>
+//       <div className="flex items-center px-4 bg-white/90 backdrop-blur-sm rounded-full shadow-lg">
+//         <span className="text-[color:var(--brown)] font-bold">
+//           {currentSection + 1} / {totalSections}
+//         </span>
+//       </div>
 
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        onClick={onNext}
-        disabled={currentSection === totalSections - 1}
-        className={`px-6 py-3 rounded-full shadow-lg font-bold transition-all ${
-          currentSection === totalSections - 1
-            ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-            : "bg-[color:var(--gold)] text-[color:var(--charcoal)] hover:bg-yellow-400"
-        }`}
-      >
-        Tiếp →
-      </motion.button>
-    </div>
-  );
-};
+//       <motion.button
+//         whileHover={{ scale: 1.1 }}
+//         whileTap={{ scale: 0.9 }}
+//         onClick={onNext}
+//         disabled={currentSection === totalSections - 1}
+//         className={`px-6 py-3 rounded-full shadow-lg font-bold transition-all ${
+//           currentSection === totalSections - 1
+//             ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+//             : "bg-[color:var(--gold)] text-[color:var(--charcoal)] hover:bg-yellow-400"
+//         }`}
+//       >
+//         Tiếp →
+//       </motion.button>
+//     </div>
+//   );
+// };
 import MusicPlayer from "./components/MusicLayout";
 
 export default function Home() {
