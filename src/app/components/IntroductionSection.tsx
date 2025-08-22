@@ -225,7 +225,7 @@ const IntroductionSection: React.FC = () => {
               style={{ 
                 color: "var(--gray-white, #020202ff)",
                 // textShadow: "5px 5px 0 rgba(0,0,0,.15)",
-                fontSize: "24px",
+                fontSize: "40px",
                 fontWeight: 700,
                 lineHeight: "1.2",
                 textTransform: "uppercase",
