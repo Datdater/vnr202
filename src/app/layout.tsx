@@ -22,8 +22,8 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
-  title: "Giá Trị Thặng Dư - Lý Thuyết Kinh Tế Chính Trị",
-  description: "Khám phá lý thuyết giá trị thặng dư và tác động của nó đến nền kinh tế hiện đại",
+  title: "Chiến thắng Điện Biên Phủ",
+  description: "",
 };
 
 export default function RootLayout({
