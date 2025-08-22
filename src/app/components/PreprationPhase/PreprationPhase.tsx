@@ -151,6 +151,11 @@ function PreprationPhase() {
                   1 Đại đội xe tăng (10 chiếc)
                 </li>
                 <li className="bg-blue-200 p-2 rounded shadow flex items-center gap-2">
+                  <img
+                    src="/cargo-truck_936784.png"
+                    alt="icon"
+                    className="w-15 h-15"
+                  />
                   1 Đại đội xe vận tải (~200 xe)
                 </li>
                 <li className="bg-blue-200 p-2 rounded shadow flex items-center gap-2">
