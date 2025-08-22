@@ -27,7 +27,7 @@ export default function DiaglogContentTab({
       key: 'prepare',
       label: 'Chuẩn bị',
       content: (
-        <div className="space-y-3 leading-relaxed text-[color:var(--charcoal)]">
+        <div className="space-y-4 leading-relaxed text-[color:var(--charcoal)]">
           <p>
             18 giờ ngày 30/3/1954, đợt tiến công thứ hai vào Tập đoàn cứ điểm Điện Biên Phủ bắt đầu. Pháo binh chiến dịch dồn dập bắn vào Sở chỉ huy của Đờ Cát-xtơ-ri và các điểm cao C1, D1, E1, các trận địa pháo, khu vực cơ động của địch ở Mường Thanh, Hồng Cúm.
           </p>
@@ -38,7 +38,7 @@ export default function DiaglogContentTab({
       key: 'progress',
       label: 'Diễn biến',
       content: (
-        <div className="space-y-3 leading-relaxed text-[color:var(--charcoal)]">
+        <div className="space-y-4 leading-relaxed text-[color:var(--charcoal)]">
           <p>
             Tại cứ điểm C1, Trung đoàn 98 do Trung đoàn trưởng Vũ Lăng chỉ huy tiến công nhanh. Sau 15 phút, ta dọn xong cửa mở qua 7 lớp rào thép gai và bằng một đợt xung phong đã chiếm được lô cốt cao nhất.
           </p>
@@ -55,7 +55,7 @@ export default function DiaglogContentTab({
       key: 'result',
       label: 'Kết quả',
       content: (
-        <div className="space-y-3 leading-relaxed text-[color:var(--charcoal)]">
+        <div className="space-y-4 leading-relaxed text-[color:var(--charcoal)]">
           <p>
             C1: Trong 45 phút, ta diệt và bắt toàn bộ một đại đội (140 tên) thuộc tiểu đoàn 1, trung đoàn 4 Ma-rốc; ta thương vong 10 người.
           </p>
@@ -116,7 +116,7 @@ export default function DiaglogContentTab({
   return (
     <div className="w-full flex flex-col items-center">
       <button
-        className="bg-[color:var(--gold)] text-[color:var(--charcoal)] font-bold px-6 py-3 rounded-full shadow-lg text-lg hover:bg-yellow-400 transition"
+        className="bg-[color:var(--gold)] text-[color:var(--charcoal)] font-bold px-6 py-3 rounded-full shadow-lg text-lg hover:bg-yellow-400 transition-colors duration-200 transform hover:scale-105"
         onClick={() => setIsOpen(true)}
       >
         {triggerText}
@@ -125,33 +125,38 @@ export default function DiaglogContentTab({
       {isOpen && (
         <div
           ref={overlayRef}
-          className="fixed inset-0 z-[100] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
+          className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-2 sm:p-4"
           onMouseDown={handleBackdropMouseDown}
         >
           <div
-            className="relative w-full max-w-4xl md:max-w-5xl h-[90vh] md:h-[85vh] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col"
+            className="relative w-full max-w-4xl lg:max-w-6xl h-[95vh] sm:h-[90vh] lg:h-[85vh] bg-white rounded-xl lg:rounded-2xl shadow-2xl overflow-hidden flex flex-col"
             role="dialog"
             aria-modal="true"
             aria-labelledby="dialog-content-tab-title"
           >
-            {/* Sticky Header + Tabs */}
-            <div className="sticky top-0 bg-white/95 backdrop-blur-sm border-b">
-              <div className="flex items-center justify-between px-6 py-4">
-                <h3 id="dialog-content-tab-title" className="text-xl font-bold text-[color:var(--brown)]">{title}</h3>
+            {/* Sticky Header */}
+            <div className="sticky top-0 bg-white/98 backdrop-blur-sm border-b border-gray-200 z-10">
+              <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
+                <h3 
+                  id="dialog-content-tab-title" 
+                  className="text-lg sm:text-xl font-bold text-[color:var(--brown)] pr-4"
+                >
+                  {title}
+                </h3>
                 <button
                   ref={closeButtonRef}
                   aria-label="Đóng"
-                  className="bg-[color:var(--brown)] text-white rounded-full w-9 h-9 flex items-center justify-center hover:bg-[color:var(--charcoal)] focus:outline-none focus:ring-2 focus:ring-[color:var(--gold)]"
+                  className="bg-[color:var(--brown)] text-white rounded-full w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center hover:bg-[color:var(--charcoal)] focus:outline-none focus:ring-2 focus:ring-[color:var(--gold)] transition-colors duration-200 flex-shrink-0"
                   onClick={() => setIsOpen(false)}
                 >
-                  ✕
+                  <span className="text-sm sm:text-base">✕</span>
                 </button>
               </div>
 
-              {/* Tabs */}
-              <div className="px-6 pb-3">
+              {/* Tabs Navigation */}
+              <div className="px-4 sm:px-6 pb-3">
                 <div
-                  className="flex gap-2 overflow-x-auto no-scrollbar"
+                  className="flex gap-1 sm:gap-2 overflow-x-auto scrollbar-hide"
                   role="tablist"
                   aria-label="Tabs"
                   onKeyDown={handleTabsKeyDown}
@@ -167,10 +172,10 @@ export default function DiaglogContentTab({
                         aria-controls={`dialogtab-panel-${tab.key}`}
                         tabIndex={isActive ? 0 : -1}
                         onClick={() => setActiveKey(tab.key)}
-                        className={`px-4 py-2 rounded-full text-sm font-semibold transition border whitespace-nowrap ${
+                        className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 border whitespace-nowrap flex-shrink-0 ${
                           isActive
-                            ? 'bg-[color:var(--gold)] text-[color:var(--charcoal)] border-[color:var(--gold)]'
-                            : 'bg-white text-[color:var(--brown)] border-[color:var(--gold)] hover:bg-yellow-50'
+                            ? 'bg-[color:var(--gold)] text-[color:var(--charcoal)] border-[color:var(--gold)] shadow-md'
+                            : 'bg-white text-[color:var(--brown)] border-[color:var(--gold)] hover:bg-yellow-50 hover:border-yellow-400'
                         }`}
                       >
                         {tab.label}
@@ -186,9 +191,11 @@ export default function DiaglogContentTab({
               id={`dialogtab-panel-${activeTab.key}`}
               role="tabpanel"
               aria-labelledby={`dialogtab-${activeTab.key}`}
-              className="flex-1 px-6 py-4 overflow-y-auto dialog-content"
+              className="flex-1 px-4 sm:px-6 py-4 sm:py-6 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100"
             >
-              {activeTab.content}
+              <div className="max-w-none">
+                {activeTab.content}
+              </div>
             </div>
           </div>
         </div>

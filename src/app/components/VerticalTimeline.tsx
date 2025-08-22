@@ -307,11 +307,11 @@ function VerticalTimeline1() {
                             </h4>
                             <ul className="list-disc pl-5 space-y-1 text-sm">
                               <li>
-                                Tiêu diệt gọn “lá chắn” phía Bắc – mở màn thắng
+                                Tiêu diệt gọn "lá chắn" phía Bắc – mở màn thắng
                                 lợi cho toàn chiến dịch.
                               </li>
                               <li>
-                                Khẳng định phương châm “đánh chắc, tiến chắc” là
+                                Khẳng định phương châm "đánh chắc, tiến chắc" là
                                 đúng đắn và hiệu quả.
                               </li>
                               <li>
@@ -592,144 +592,178 @@ function VerticalTimeline1() {
                 title="Trận Độc Lập (14 – 15/3/1954)"
                 tabs={[
                   {
+                    key: "overview",
+                    label: "Tổng quan",
+                    content: (
+                      <div className="space-y-6 leading-relaxed text-[color:var(--charcoal)]">
+                        <div className="bg-gradient-to-r from-[color:var(--gold)]/20 to-transparent p-6 rounded-lg border-l-4 border-[color:var(--gold)]">
+                          <h4 className="font-semibold text-[color:var(--brown)] mb-3 text-lg">
+                            Trận Độc Lập - Mở màn chiến dịch Điện Biên Phủ
+                          </h4>
+                          <p className="text-sm leading-relaxed">
+                            Trận Độc Lập diễn ra từ chiều 14/3 đến sáng 15/3/1954, là trận đánh mở màn của chiến dịch Điện Biên Phủ.
+                            Đây là trận đánh then chốt đầu tiên, đánh dấu sự khởi đầu của cuộc tiến công quy mô lớn vào Tập đoàn cứ điểm Điện Biên Phủ.
+                          </p>
+                        </div>
+                      </div>
+                    ),
+                  },
+                  {
                     key: "progress",
                     label: "Diễn biến",
                     content: (
                       <div className="space-y-6 leading-relaxed text-[color:var(--charcoal)]">
-                        <div className="space-y-4">
-                          <div className="bg-gradient-to-r from-[color:var(--gold)]/20 to-transparent p-4 rounded-lg border-l-4 border-[color:var(--gold)]">
-                            <h4 className="font-semibold text-[color:var(--brown)] mb-2">
-                              Chiều 14-3-1954
-                            </h4>
-                            <p>
-                              Đúng 16 giờ 45 phút ngày 14-3-1954, đơn vị được
-                              lệnh hành quân vào vị trí xuất phát xung phong. Bộ
-                              đội hành quân gặp trời mưa tầm tã. Các chiến hào
-                              đất bùn lầy lội, lại bị pháo địch ở Mường Thanh,
-                              Hồng Cúm bắn ra dồn dập. Súng cối 120 ly trong cứ
-                              điểm cũng nhả đạn về hướng tiến quân của ta, đồng
-                              thời pháo của ta cũng bắn vào các trận địa pháo
-                              địch ở Mường Thanh tạo thời cơ cho bộ đội tiến vào
-                              vị trí xuất phát xung phong thuận lợi. Đúng 24 giờ
-                              ngày 14-3-1954, Tiểu đoàn 115, Trung đoàn 165 ở
-                              hướng chủ yếu đã vào được vị trí xuất phát xung
-                              phong. Hướng thứ yếu của Trung đoàn 88 cũng đã vào
-                              vị trí chiến đấu đúng thời gian. Các chiến sĩ bộc
-                              phá những đơn vị xung kích mũi nhọn đã trườn qua
-                              các khoảng trống dưới trời mưa vượt qua tầm đạn
-                              pháo của địch cày đi xới lại. Bộ đội bí mật nhích
-                              dần về phía chân cứ điểm, với quyết tâm hừng hực
-                              khí thế chiến đấu, cán bộ, chiến sĩ đều nóng lòng,
-                              sốt ruột chờ đợi lệnh nổ súng, đề nghị trên cho
-                              đánh. Nhưng được lệnh của Bộ chỉ huy mặt trận
-                              truyền xuống, theo kế hoạch pháo cối hôm 13-3 phối
-                              hợp yểm trợ chi viện cho trận đánh Him Lam, được
-                              chuyển tất cả sang tham gia chiến đấu chi viện cho
-                              đồi Độc Lập, đang trên đường hành quân di chuyển,
-                              do trời mưa đường sá lầy lội chưa tới được. Để hạn
-                              chế tổn thất thấp nhất và chắc thắng, phải chờ
-                              pháo tăng cường đến.
-                            </p>
-                          </div>
-                          <div className="bg-gradient-to-r from-[color:var(--gold)]/20 to-transparent p-4 rounded-lg border-l-4 border-[color:var(--gold)]">
-                            <h4 className="font-semibold text-[color:var(--brown)] mb-2">
-                              Ngày 15 – 16/3/1954
-                            </h4>
-                            <p>
-                              Chờ đến 2 giờ sáng ngày 15-3, pháo mới tới trận
-                              địa, 3 giờ được lệnh tấn công. Tất cả các loại hoả
-                              lực, trọng pháo của Bộ chỉ huy mặt trận bắn dồn
-                              dập, mãnh liệt vào các trận địa pháo của địch để
-                              khống chế uy hiếp. Pháo địch bị hạn chế bắn vào
-                              đội hình quân ta. Ngoài ra, các loại pháo đi cùng
-                              tham gia bắn chế áp vào cứ điểm, tiêu diệt các ổ
-                              đề kháng của địch, chi viện đắc lực cho bộ binh
-                              tiến hành mở cửa. Hướng chủ yếu của Trung đoàn 165
-                              tiến hành thuận lợi, Tiểu đoàn 115 chủ công tiến
-                              lên đánh bộc phá mở cửa, giữa lúc pháo ta vẫn tiếp
-                              tục bắn chế áp và chuyển làn dần vào các mục tiêu
-                              trong khu trung tâm cứ điểm. Sau 40 phút, chiến sĩ
-                              bộc phá đã tiến hành mở cửa xong, tiểu đội mũi
-                              nhọn nhanh chóng xung phong, vượt qua cửa mở, ào
-                              ạt tiến vào cứ điểm phát triển chiến đấu, nhằm vào
-                              những mục tiêu của địch. Hồi ức về trận chiến đồi
-                              Độc Lập tại Điện Biên Phủ Bức ảnh ghi lại khoảnh
-                              khắc Đại tướng Võ Nguyên Giáp ôm đồng chí Bùi Đức
-                              Tùng. Cuộc chiến đấu ngay từ lúc đầu đã diễn ra
-                              rất quyết liệt, giành đi giật lại, từng lô cốt,
-                              từng đoạn chiến hào. Bọn địch dựa vào hầm ngầm
-                              công sự chống trả quyết liệt, Tiểu đội trưởng Trần
-                              Ngọc Doãn nhanh chóng bắt được một tù binh và bắt
-                              nó dẫn đường tiến thẳng tới trận địa cối, tiêu
-                              diệt phá huỷ 4 khẩu 120 ly, rồi phát triển đánh
-                              chiếm khu thông tin và Sở chỉ huy của địch, tạo
-                              điều kiện thuận lợi cho Tiểu đoàn 115 phát triển
-                              chiến đấu. Trên hướng thứ yếu, đơn vị chủ công của
-                              Trung đoàn 88 cùng tiến hành mở cửa, nhưng đã gần
-                              4 giờ sáng, đội bộc phá vẫn chưa đánh phá xong các
-                              hàng rào. Đồng chí Tiểu đội trưởng Nguyễn Văn Tý
-                              liên tiếp kiểm tra đội đánh bộc phá, phát hiện
-                              đánh sai hướng mở cửa, bị hoả lực địch ngăn chặn,
-                              lập tức đồng chí Tý đã kịp thời điều chỉnh và chỉ
-                              huy tiếp tục cho đánh bộc phá vào các hàng rào còn
-                              lại. Hơn 4 giờ sáng, ta đánh xong hàng rào cuối
-                              cùng, đưa lực lượng vào phát triển chiến đấu,
-                              nhanh chóng đánh chiếm các mục tiêu hoả lực, hầm
-                              ngầm lô cốt. Địch ngoan cố chống trả quyết liệt.
-                              Các tổ 3 người dùng thủ pháo, lựu đạn, tiểu liên
-                              diệt từng tên địch phối hợp với Tiểu đoàn 115
-                              chiếm từng đoạn chiến hào, từng lô cốt, ụ súng.
-                              Trận chiến đấu càng về cuối càng gay go quyết liệt
-                              với ý đồ của chúng là ra sức cầm cự chờ đến sáng
-                              lực lượng ở Mường Thanh ra cứu viện, nhưng quyết
-                              tâm của cán bộ chiến sĩ ta kiên quyết giải quyết
-                              xong trước khi trời sáng. Trận đánh từ 3 giờ 30
-                              phút cho đến 6 giờ 30 phút ngày 15-3-1954 mới kết
-                              thúc. Quân ta hoàn toàn làm chủ đồi Độc Lập, tiêu
-                              diệt 483 tên địch, trong đó có 2 tên quan ba, bắt
-                              sống 200 tên, thu toàn bộ vũ khí, xoá sổ Tiểu đoàn
-                              5 Bắc Phi. Vừa kết thúc trận đánh, thì trời cũng
-                              vừa sáng. Bọn địch ở Trung tâm Mường Thanh đưa lực
-                              lượng bộ binh và xe tăng ra phản kích, thì bị Đại
-                              đội 213 của Trung đoàn 88 chặn đánh tiêu diệt một
-                              số tên, buộc chúng phải dừng lại và quay đầu rút
-                              chạy về trung tâm Mường Thanh.
-                            </p>
-                          </div>
-                          <div className="bg-gradient-to-r from-[color:var(--gold)]/20 to-transparent p-4 rounded-lg border-l-4 border-[color:var(--gold)]">
-                            <h4 className="font-semibold text-[color:var(--brown)] mb-2">
-                              Sáng 17-3-1954
-                            </h4>
-                            <p>
-                              Thấy ta chuẩn bị tấn công, quân Pháp ở Bản Kéo sợ
-                              hãi rút chạy. Trung đoàn 36 của ta không cần nổ
-                              súng đã chiếm Bản Kéo và làm chủ các ngọn đồi phía
-                              Bắc sân bay Mường Thanh.
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="bg-gray-50 p-4 rounded-lg">
-                          <Image
-                            src="https://hair-salon-fpt.io.vn/uploads/14d5d4e0-a2dc-4a47-ade5-8d186e417790_dai%20tuong%20vo%20nguyen%20giao.jpg"
-                            alt="Minh họa trận Độc Lập"
-                            width={800}
-                            height={1200}
-                            className="w-full h-auto object-contain rounded-lg shadow-md"
-                          />
-                          <p className="text-sm text-gray-600 text-center mt-2 italic">
-                            Hình ảnh minh họa trận đánh Độc Lập
-                          </p>
-                        </div>
-
-                        <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-                          <h4 className="font-semibold text-[color:var(--brown)] mb-2">
-                            Kết quả
+                        {/* Phase 1: Preparation */}
+                        <div className="bg-emerald-50 p-6 rounded-lg border-l-4 border-emerald-500">
+                          <h4 className="font-semibold text-[color:var(--brown)] mb-3 text-lg flex items-center">
+                            <span className="bg-emerald-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">1</span>
+                            Chiều 14-3-1954: Chuẩn bị và triển khai
                           </h4>
-                          <p>
-                            Tiểu đoàn Bắc Phi của Pháp bị xóa sổ; 483 tên địch
-                            bị tiêu diệt, 200 tên bị bắt. Ta giữ vững trận địa,
-                            tạo thế tiến công sang Bản Kéo.
+                          <div className="space-y-3 text-sm leading-relaxed">
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>16 giờ 45 phút:</strong> Đơn vị được lệnh hành quân vào vị trí xuất phát xung phong.
+                            </div>
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>Điều kiện khó khăn:</strong> Trời mưa tầm tã, chiến hào đất bùn lầy lội, bị pháo địch từ Mường Thanh, Hồng Cúm bắn ra dồn dập.
+                            </div>
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>24 giờ:</strong> Tiểu đoàn 115, Trung đoàn 165 (hướng chủ yếu) và Trung đoàn 88 (hướng thứ yếu) đã vào vị trí chiến đấu.
+                            </div>
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>Chiến sĩ bộc phá:</strong> Trườn qua các khoảng trống dưới trời mưa, vượt qua tầm đạn pháo của địch, bí mật nhích dần về phía chân cứ điểm.
+                            </div>
+                            <div className="bg-red-50 p-3 rounded border-l-4 border-red-400">
+                              <strong>Vấn đề:</strong> Pháo tăng cường chưa tới được do trời mưa đường sá lầy lội, phải chờ để hạn chế tổn thất và đảm bảo chắc thắng.
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Phase 2: Attack */}
+                        <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-500">
+                          <h4 className="font-semibold text-[color:var(--brown)] mb-3 text-lg flex items-center">
+                            <span className="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">2</span>
+                            Ngày 15-3-1954: Tấn công và chiến đấu
+                          </h4>
+                          <div className="space-y-3 text-sm leading-relaxed">
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>2 giờ sáng:</strong> Pháo tới trận địa, 3 giờ được lệnh tấn công.
+                            </div>
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>Hỏa lực yểm trợ:</strong> Tất cả các loại hỏa lực, trọng pháo bắn dồn dập vào trận địa pháo địch để khống chế, chế áp cứ điểm.
+                            </div>
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>Hướng chủ yếu (Trung đoàn 165):</strong> Tiến hành thuận lợi, Tiểu đoàn 115 chủ công đánh bộc phá mở cửa.
+                            </div>
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>Sau 40 phút:</strong> Chiến sĩ bộc phá mở cửa xong, tiểu đội mũi nhọn xung phong vào cứ điểm.
+                            </div>
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>Chiến đấu quyết liệt:</strong> Giành đi giật lại từng lô cốt, từng đoạn chiến hào. Địch dựa vào hầm ngầm công sự chống trả quyết liệt.
+                            </div>
+                            <div className="bg-green-50 p-3 rounded border-l-4 border-green-400">
+                              <strong>Thành công:</strong> Tiểu đội trưởng Trần Ngọc Doãn bắt tù binh dẫn đường, tiêu diệt 4 khẩu cối 120 ly, đánh chiếm khu thông tin và Sở chỉ huy địch.
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Phase 3: Completion */}
+                        <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                          <h4 className="font-semibold text-[color:var(--brown)] mb-3 text-lg flex items-center">
+                            <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">3</span>
+                            Kết thúc trận đánh
+                          </h4>
+                          <div className="space-y-3 text-sm leading-relaxed">
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>Thời gian:</strong> Từ 3 giờ 30 phút đến 6 giờ 30 phút ngày 15-3-1954.
+                            </div>
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>Kết quả:</strong> Quân ta hoàn toàn làm chủ đồi Độc Lập.
+                            </div>
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>Thiệt hại địch:</strong> Tiêu diệt 483 tên (có 2 quan ba), bắt sống 200 tên, thu toàn bộ vũ khí.
+                            </div>
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>Đánh dấu:</strong> Xóa sổ Tiểu đoàn 5 Bắc Phi.
+                            </div>
+                            <div className="bg-yellow-50 p-3 rounded border-l-4 border-yellow-400">
+                              <strong>Phản kích thất bại:</strong> Địch từ Mường Thanh đưa bộ binh và xe tăng ra phản kích nhưng bị Đại đội 213 (Trung đoàn 88) chặn đánh, buộc phải rút chạy.
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Image Section */}
+                        <div className="text-center">
+                          <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
+                            <Image
+                              src="https://imgnvsk.vnanet.vn/MediaUpload/Content/2023/8/18/434-ttxvn_dien_bien_phu_12.jpg"
+                              alt="Bộ đội ta đánh địch phản kích trong trận Độc Lập"
+                              width={800}
+                              height={1200}
+                              className="w-full h-auto object-contain rounded-lg shadow-md"
+                            />
+                            <p className="text-sm text-gray-600 mt-3 italic">
+                              Bộ đội ta đánh địch phản kích. (Ảnh: Tư liệu/TTXVN phát)
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ),
+                  },
+                  {
+                    key: "significance",
+                    label: "Ý nghĩa",
+                    content: (
+                      <div className="space-y-6 leading-relaxed text-[color:var(--charcoal)]">
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <div className="bg-emerald-50 p-6 rounded-lg border-l-4 border-emerald-500">
+                            <h4 className="font-semibold text-[color:var(--brown)] mb-4 text-lg">
+                              Ý nghĩa quân sự
+                            </h4>
+                            <div className="space-y-3 text-sm leading-relaxed">
+                              <div className="bg-white/50 p-3 rounded">
+                                <strong>Mở màn chiến dịch:</strong> Đánh dấu sự khởi đầu của cuộc tiến công quy mô lớn vào Tập đoàn cứ điểm Điện Biên Phủ.
+                              </div>
+                              <div className="bg-white/50 p-3 rounded">
+                                <strong>Thử nghiệm chiến thuật:</strong> Kiểm nghiệm hiệu quả của phương pháp đánh bộc phá mở cửa và xung phong.
+                              </div>
+                              <div className="bg-white/50 p-3 rounded">
+                                <strong>Khẳng định sức mạnh:</strong> Chứng minh khả năng tiêu diệt các cứ điểm kiên cố của địch.
+                              </div>
+                              <div className="bg-white/50 p-3 rounded">
+                                <strong>Tạo thế tiến công:</strong> Mở đường cho các trận đánh tiếp theo vào Bản Kéo và các cứ điểm khác.
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                            <h4 className="font-semibold text-[color:var(--brown)] mb-4 text-lg">
+                              Ý nghĩa tinh thần
+                            </h4>
+                            <div className="space-y-3 text-sm leading-relaxed">
+                              <div className="bg-white/50 p-3 rounded">
+                                <strong>Nâng cao tinh thần:</strong> Tăng cường niềm tin và quyết tâm cho toàn bộ chiến dịch.
+                              </div>
+                              <div className="bg-white/50 p-3 rounded">
+                                <strong>Khẳng định sự lãnh đạo:</strong> Chứng minh tính đúng đắn của đường lối chiến tranh nhân dân.
+                              </div>
+                              <div className="bg-white/50 p-3 rounded">
+                                <strong>Tạo tiếng vang:</strong> Gây chấn động trong hàng ngũ địch, làm suy giảm tinh thần chiến đấu.
+                              </div>
+                              <div className="bg-white/50 p-3 rounded">
+                                <strong>Rút kinh nghiệm:</strong> Cung cấp bài học quý báu cho các trận đánh tiếp theo.
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="bg-gradient-to-r from-[color:var(--gold)]/20 to-transparent p-6 rounded-lg border-l-4 border-[color:var(--gold)]">
+                          <h4 className="font-semibold text-[color:var(--brown)] mb-3 text-lg">
+                            Kết luận
+                          </h4>
+                          <p className="text-center font-semibold text-[color:var(--brown)] leading-relaxed">
+                            Trận Độc Lập là chiến thắng quan trọng mở đầu, tạo đà cho toàn bộ chiến dịch Điện Biên Phủ.
+                            Thắng lợi này không chỉ có ý nghĩa quân sự mà còn có ý nghĩa chính trị to lớn,
+                            khẳng định sức mạnh và quyết tâm của quân đội Việt Nam trong cuộc kháng chiến chống Pháp.
                           </p>
                         </div>
                       </div>
@@ -892,7 +926,7 @@ function VerticalTimeline1() {
                             </li>
                           </ul>
                         </div>
-                        
+
                         <div className="bg-gradient-to-r from-[color:var(--gold)]/20 to-transparent p-6 rounded-lg border-l-4 border-[color:var(--gold)]">
                           <h6 className="font-semibold text-[color:var(--brown)] mb-3">
                             Nhiệm vụ cụ thể trao cho từng đơn vị:
@@ -915,7 +949,7 @@ function VerticalTimeline1() {
                             </div>
                           </div>
                         </div>
-                        
+
                         <div className="text-center">
                           <Image
                             src="https://mediafile.qdnd.vn//images/2024/4/30/nghingoi.jpg"
@@ -975,7 +1009,7 @@ function VerticalTimeline1() {
                                 </p>
                               </div>
                             </div>
-                            
+
                             <div>
                               <h6 className="font-semibold text-[color:var(--brown)] mb-3 text-lg">
                                 2. Đào hầm, siết chặt vòng vây (Từ 5/4 đến 30/4/1954)
@@ -994,7 +1028,7 @@ function VerticalTimeline1() {
                             </div>
                           </div>
                         </div>
-                        
+
                         <div className="text-center">
                           <Image
                             src="https://mediafile.qdnd.vn//images/2024/4/30/phaobinh.gif"
@@ -1033,7 +1067,7 @@ function VerticalTimeline1() {
                               </div>
                             </div>
                           </div>
-                          
+
                           <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
                             <h6 className="font-semibold text-[color:var(--brown)] mb-4 text-lg">
                               Về phía địch:
@@ -1051,7 +1085,7 @@ function VerticalTimeline1() {
                             </div>
                           </div>
                         </div>
-                        
+
                         <div className="bg-gradient-to-r from-[color:var(--gold)]/20 to-transparent p-6 rounded-lg border-l-4 border-[color:var(--gold)]">
                           <p className="text-center font-semibold text-[color:var(--brown)] leading-relaxed">
                             Kết quả của đợt 2 đã làm thay đổi hoàn toàn cục diện chiến trường, từ đó quân ta nắm quyền chủ động và tạo lợi thế tuyệt đối để chuẩn bị cho đợt tấn công thứ ba, kết thúc chiến dịch với chiến thắng vang dội vào ngày 7 tháng 5 năm 1954.
@@ -1152,14 +1186,14 @@ function VerticalTimeline1() {
                             <p>
                               Then chốt, công sự nhiều tầng, tiến công rất khó
                               khăn. Đêm 30 rạng 31/3 giằng co, mỗi bên giữ nửa
-                              đồi. Cuối tháng 3, A1 là “thành lũy cuối cùng” của
+                              đồi. Cuối tháng 3, A1 là "thành lũy cuối cùng" của
                               địch ở trung tâm.
                             </p>
                           </div>
                         </div>
                         <div className="bg-gray-50 p-4 rounded-lg">
                           <Image
-                            src="https://hair-salon-fpt.io.vn/uploads/14d5d4e0-a2dc-4a47-ade5-8d186e417790_dai%20tuong%20vo%20nguyen%20giao.jpg"
+                            src="https://mediafile.qdnd.vn//images/2024/4/30/ldc1.gif"
                             alt="Minh họa các cao điểm"
                             width={800}
                             height={1200}
@@ -1234,21 +1268,21 @@ function VerticalTimeline1() {
                           <p>
                             Bộ đội ta đào hơn 100 km giao thông hào: hào trục để
                             cơ động pháo, vận chuyển; hào tiếp cận áp sát địch.
-                            Ban đêm lăn “con cúi” che đạn để đào hào an toàn.
+                            Ban đêm lăn "con cúi" che đạn để đào hào an toàn.
                             Vòng vây siết dần, sân bay bị cắt, binh lính địch
                             luôn bị bắn tỉa khi cơ động.
                           </p>
                         </div>
                         <div className="bg-gray-50 p-4 rounded-lg">
                           <Image
-                            src="https://hair-salon-fpt.io.vn/uploads/14d5d4e0-a2dc-4a47-ade5-8d186e417790_dai%20tuong%20vo%20nguyen%20giao.jpg"
+                            src="https://mediafile.qdnd.vn//images/2024/4/30/tuonggiap.jpg"
                             alt="Minh họa chiến thuật vây lấn"
                             width={800}
                             height={1200}
                             className="w-full h-auto object-contain rounded-lg shadow-md"
                           />
                           <p className="text-sm text-gray-600 text-center mt-2 italic">
-                            Hình ảnh minh họa chiến thuật vây lấn
+                            Bộ Chỉ huy Chiến dịch dưới sự chỉ đạo trực tiếp của Đại tướng Võ Nguyên Giáp bàn kế hoạch tác chiến cho từng trận đánh. Với phương châm "Đánh chắc, tiến chắc", quân ta thực hiện "vây lấn" Tập đoàn cứ điểm từ ngoài vào trong, lần lượt tiêu diệt từng cụm cứ điểm, tiến tới tiêu diệt hoàn toàn quân địch. Ảnh tư liệu: TTXVN
                           </p>
                         </div>
                         <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
@@ -1288,7 +1322,7 @@ function VerticalTimeline1() {
             }}
           >
             <h1 className="text-lg sm:text-xl font-semibold text-white">
-              Phong trào “săn Tây bắn tỉa”
+              Phong trào "săn Tây bắn tỉa"
             </h1>
 
             <div className="mt-3 relative w-full">
@@ -1302,45 +1336,190 @@ function VerticalTimeline1() {
             </div>
 
             {/* Xem chi tiết button */}
-            <div className="mt-4 mr-70">
+            <div className="mt-4">
               <DiaglogContentTab
-                title=" Phong trào “săn Tây bắn tỉa”"
+                title=" Phong trào săn Tây bắn tỉa"
                 tabs={[
+                  {
+                    key: "overview",
+                    label: "Tổng quan",
+                    content: (
+                      <div className="space-y-6 leading-relaxed text-[color:var(--charcoal)]">
+                        <div className="bg-gradient-to-r from-[color:var(--gold)]/20 to-transparent p-6 rounded-lg border-l-4 border-[color:var(--gold)]">
+                          <h4 className="font-semibold text-[color:var(--brown)] mb-3 text-lg">
+                            Chiến thuật "săn Tây bắn tỉa" - Siết chặt vòng vây
+                          </h4>
+                          <p className="text-sm leading-relaxed">
+                            Phong trào "săn Tây, bắn tỉa" là một chiến thuật tinh vi được quân đội Việt Nam áp dụng trong chiến dịch Điện Biên Phủ.
+                            Đây là phương pháp sử dụng các tổ bắn tỉa cơ động để tiêu diệt từng tên địch một cách có chọn lọc,
+                            gây tâm lý hoang mang và làm suy giảm sức chiến đấu của quân Pháp.
+                          </p>
+                        </div>
+                      </div>
+                    ),
+                  },
                   {
                     key: "progress",
                     label: "Diễn biến",
                     content: (
                       <div className="space-y-6 leading-relaxed text-[color:var(--charcoal)]">
-                        <div className="bg-gradient-to-r from-[color:var(--gold)]/20 to-transparent p-4 rounded-lg border-l-4 border-[color:var(--gold)]">
-                          <p>
-                            Trong 10 ngày, Đại đoàn 312 loại khỏi vòng chiến đấu
-                            110 lính Pháp bằng súng bắn tỉa. Nhiều chiến sĩ lập
-                            công xuất sắc: Đoàn Tương Líp diệt 9 tên với 9 viên
-                            đạn; chiến sĩ Lục (Trung đoàn 165) có ngày diệt tới
-                            30 địch. Địch căng thẳng, kiệt quệ tinh thần.
-                          </p>
-                        </div>
-                        <div className="bg-gray-50 p-4 rounded-lg">
-                          <Image
-                            src="https://hair-salon-fpt.io.vn/uploads/14d5d4e0-a2dc-4a47-ade5-8d186e417790_dai%20tuong%20vo%20nguyen%20giao.jpg"
-                            alt="Minh họa bắn tỉa"
-                            width={800}
-                            height={1200}
-                            className="w-full h-auto object-contain rounded-lg shadow-md"
-                          />
-                          <p className="text-sm text-gray-600 text-center mt-2 italic">
-                            Hình ảnh minh họa phong trào “săn Tây bắn tỉa”
-                          </p>
-                        </div>
-                        <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-                          <h4 className="font-semibold text-[color:var(--brown)] mb-2">
-                            Kết quả
+                        {/* Phase 1: Initial Setup */}
+                        <div className="bg-emerald-50 p-6 rounded-lg border-l-4 border-emerald-500">
+                          <h4 className="font-semibold text-[color:var(--brown)] mb-3 text-lg flex items-center">
+                            <span className="bg-emerald-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">1</span>
+                            Thiết lập lưới lửa bắn tỉa
                           </h4>
-                          <p>
-                            Nhiều sinh lực địch bị loại, hỏa điểm tiền tiêu bị
-                            vô hiệu, tinh thần địch suy sụp; góp phần giữ vững
-                            thế áp đảo và bảo toàn lực lượng ta trước đợt tổng
-                            công kích.
+                          <div className="space-y-3 text-sm leading-relaxed">
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>Thành lập tổ bắn tỉa:</strong> Các đơn vị thành lập những tổ bắn tỉa cơ động sử dụng các loại súng có trong biên chế để tiêu diệt địch.
+                            </div>
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>Vị trí thuận lợi:</strong> Chiến hào chỉ cách địch vài chục mét, bộ đội ta lợi dụng những vị trí thuận lợi, bất ngờ tiêu diệt bất cứ tên địch nào ló đầu ra khỏi công sự.
+                            </div>
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>Lưới lửa dày đặc:</strong> Xung quanh cứ điểm địch, các chiến sĩ súng trường, súng máy, pháo, cối của ta đã tạo thành một lưới lửa dày đặc sẵn sàng tiêu diệt bất kỳ tên địch nào ló đầu lên khỏi mặt đất.
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Phase 2: Psychological Warfare */}
+                        <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-500">
+                          <h4 className="font-semibold text-[color:var(--brown)] mb-3 text-lg flex items-center">
+                            <span className="bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">2</span>
+                            Chiến tranh tâm lý và nhử địch
+                          </h4>
+                          <div className="space-y-3 text-sm leading-relaxed">
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>Biện pháp nhử địch:</strong> Để buộc địch nhô đầu ra khỏi công sự, quân ta thực hiện nhiều biện pháp nhử địch rất linh hoạt.
+                            </div>
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>Mánh khóe mũ sắt:</strong> Các chiến sĩ lấy mũ sắt cắm lên đầu que đi lại dưới chiến hào làm cho địch tưởng quân ta đang vận động. Từ trong lô cốt địch nhô lên để bắn ra liền bị các tay súng bắn tỉa của ta tiêu diệt.
+                            </div>
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>Chiến thuật cờ đỏ:</strong> Có đơn vị, ban đêm cho chiến sĩ bò vào trong hàng rào của địch cắm cờ đỏ sao vàng, sáng ra, chỉ huy địch tức tối thét lính ra nhổ cờ liền bị tiêu diệt.
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Phase 3: Enemy Desperation */}
+                        <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
+                          <h4 className="font-semibold text-[color:var(--brown)] mb-3 text-lg flex items-center">
+                            <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">3</span>
+                            Sự tuyệt vọng của địch
+                          </h4>
+                          <div className="space-y-3 text-sm leading-relaxed">
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>Khó khăn lấy nước:</strong> Việc đi lấy nước của chúng ở sông Nậm Rốm vô cùng khó khăn. Có những tên địch ẩn nấp trong công sự bên bờ sông, quẳng những chiếc can xuống sông, rồi dùng dây kéo lên. Chiến sĩ bắn tỉa của ta bắn thủng can của chúng.
+                            </div>
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>Liều chết lấy nước:</strong> Không chịu nổi cơn đói khát và sự thiếu thốn đến cùng cực, nhiều tên địch đã liều chết ra nhặt dù và đi lấy nước uống.
+                            </div>
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>"Những con chuột Nậm Rốm":</strong> Có nhiều tên trốn khỏi công sự ra đào hầm riêng ở bờ sông Nậm Rốm để tiện lấy nước uống và đêm ra nhặt dù tìm đồ ăn để sống qua ngày chờ chiến dịch kết thúc. Bộ đội ta gọi chúng là "những con chuột Nậm Rốm".
+                            </div>
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>Sống lẩn khuất:</strong> Khiến chúng sống lẩn khuất như chuột dưới hào.
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Phase 4: Results */}
+                        <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                          <h4 className="font-semibold text-[color:var(--brown)] mb-3 text-lg flex items-center">
+                            <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">4</span>
+                            Thành tích và kết quả
+                          </h4>
+                          <div className="space-y-3 text-sm leading-relaxed">
+                            <div className="bg-white/50 p-3 rounded">
+                              <strong>Thành tích Đại đoàn 312:</strong> Trong 10 ngày, Đại đoàn 312 loại khỏi vòng chiến đấu 110 lính Pháp bằng súng bắn tỉa.
+                            </div>
+                            <div className="bg-green-50 p-3 rounded border-l-4 border-green-400">
+                              <strong>Chiến sĩ xuất sắc:</strong>
+                              <ul className="mt-2 space-y-1">
+                                <li>• Đoàn Tương Líp: diệt 9 tên với 9 viên đạn</li>
+                                <li>• Chiến sĩ Lục (Trung đoàn 165): có ngày diệt tới 30 địch</li>
+                              </ul>
+                            </div>
+                            <div className="bg-yellow-50 p-3 rounded border-l-4 border-yellow-400">
+                              <strong>Tác động tâm lý:</strong> Địch căng thẳng, kiệt quệ tinh thần.
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Image Section */}
+                        <div className="text-center">
+                          <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
+                            <Image
+                              src="https://file3.qdnd.vn/data/images/0/2024/04/27/upload_2080/dien%20bien%20phu.jpg?dpi=150&quality=100&w=870"
+                              alt="Hình ảnh minh họa phong trào săn Tây bắn tỉa trong chiến dịch Điện Biên Phủ"
+                              width={800}
+                              height={1200}
+                              className="w-full h-auto object-contain rounded-lg shadow-md"
+                            />
+                            <p className="text-sm text-gray-600 mt-3 italic">
+                              Hình ảnh minh họa phong trào "săn Tây bắn tỉa"
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ),
+                  },
+                  {
+                    key: "significance",
+                    label: "Ý nghĩa",
+                    content: (
+                      <div className="space-y-6 leading-relaxed text-[color:var(--charcoal)]">
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <div className="bg-emerald-50 p-6 rounded-lg border-l-4 border-emerald-500">
+                            <h4 className="font-semibold text-[color:var(--brown)] mb-4 text-lg">
+                              Ý nghĩa quân sự
+                            </h4>
+                            <div className="space-y-3 text-sm leading-relaxed">
+                              <div className="bg-white/50 p-3 rounded">
+                                <strong>Tiêu hao sinh lực:</strong> Nhiều sinh lực địch bị loại khỏi vòng chiến đấu một cách có hiệu quả.
+                              </div>
+                              <div className="bg-white/50 p-3 rounded">
+                                <strong>Vô hiệu hóa hỏa điểm:</strong> Các hỏa điểm tiền tiêu của địch bị vô hiệu hóa.
+                              </div>
+                              <div className="bg-white/50 p-3 rounded">
+                                <strong>Bảo toàn lực lượng:</strong> Góp phần giữ vững thế áp đảo và bảo toàn lực lượng ta trước đợt tổng công kích.
+                              </div>
+                              <div className="bg-white/50 p-3 rounded">
+                                <strong>Chiến thuật hiệu quả:</strong> Chứng minh hiệu quả của chiến thuật bắn tỉa trong điều kiện chiến trường.
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                            <h4 className="font-semibold text-[color:var(--brown)] mb-4 text-lg">
+                              Ý nghĩa tâm lý
+                            </h4>
+                            <div className="space-y-3 text-sm leading-relaxed">
+                              <div className="bg-white/50 p-3 rounded">
+                                <strong>Suy sụp tinh thần:</strong> Tinh thần địch suy sụp nghiêm trọng, gây hoang mang trong hàng ngũ.
+                              </div>
+                              <div className="bg-white/50 p-3 rounded">
+                                <strong>Chiến tranh tâm lý:</strong> Tạo áp lực tâm lý liên tục, khiến địch luôn trong trạng thái căng thẳng.
+                              </div>
+                              <div className="bg-white/50 p-3 rounded">
+                                <strong>Kiệt quệ sức lực:</strong> Địch bị kiệt quệ cả về thể chất lẫn tinh thần.
+                              </div>
+                              <div className="bg-white/50 p-3 rounded">
+                                <strong>Nâng cao tinh thần ta:</strong> Tăng cường niềm tin và quyết tâm cho bộ đội ta.
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="bg-gradient-to-r from-[color:var(--gold)]/20 to-transparent p-6 rounded-lg border-l-4 border-[color:var(--gold)]">
+                          <h4 className="font-semibold text-[color:var(--brown)] mb-3 text-lg">
+                            Kết luận
+                          </h4>
+                          <p className="text-center font-semibold text-[color:var(--brown)] leading-relaxed">
+                            Phong trào "săn Tây bắn tỉa" là một chiến thuật tinh vi và hiệu quả,
+                            không chỉ tiêu hao sinh lực địch mà còn tạo ra áp lực tâm lý mạnh mẽ.
+                            Chiến thuật này đã góp phần quan trọng vào việc siết chặt vòng vây và
+                            chuẩn bị cho đợt tổng công kích cuối cùng của chiến dịch Điện Biên Phủ.
                           </p>
                         </div>
                       </div>
@@ -1383,37 +1562,101 @@ function VerticalTimeline1() {
                   title="Đợt 3 (1 – 7/5/1954) – Tổng công kích, tiêu diệt toàn bộ tập đoàn cứ điểm"
                   tabs={[
                     {
-                      key: "progress",
+                      key: "preparation",
+                      label: "Chuẩn bị",
+                      content: (
+                        <div className="space-y-6 leading-relaxed text-[color:var(--charcoal)]">
+                          {/* Main content section */}
+                          <div className="bg-gradient-to-r from-[color:var(--gold)]/20 to-transparent p-6 rounded-xl border-l-4 border-[color:var(--gold)] shadow-sm">
+                            <p className="text-justify leading-7">
+                              Mục tiêu của đợt tấn công thứ ba đã được xác định rõ ràng, dựa trên những thành công của đợt 2:
+                              <br />
+                              Tiêu diệt hoàn toàn các cứ điểm phía Đông: Trọng tâm là đánh chiếm đồi A1, một cứ điểm then chốt và kiên cố nhất của địch, cùng với các cứ điểm còn lại như C1, E2.
+                              <br />
+                              Đánh chiếm các cứ điểm phía Tây: Mở rộng tấn công sang các cứ điểm ở phía Tây, tiêu diệt thêm sinh lực địch, siết chặt vòng vây hơn nữa.
+                              <br />
+                              Tổng công kích vào khu trung tâm: Tập trung toàn bộ hỏa lực pháo binh để bắn phá dữ dội khu trung tâm Mường Thanh, tạo điều kiện cho các mũi xung kích tổng tấn công vào sở chỉ huy địch.
+                              <br />
+                              Bắt sống bộ chỉ huy địch: Mục tiêu cuối cùng là bắt sống tướng De Castries và toàn bộ Bộ Tham mưu của Pháp tại Điện Biên Phủ, buộc địch phải đầu hàng, kết thúc chiến dịch.
+                              <br />
+                              Sự chuẩn bị kỹ lưỡng và mục tiêu rõ ràng đã giúp quân đội ta đạt được chiến thắng trọn vẹn, chấm dứt hoàn toàn sự tồn tại của Tập đoàn cứ điểm Điện Biên Phủ vào chiều ngày 7 tháng 5 năm 1954.
+                            </p>
+                          </div>
+
+                          {/* Image section */}
+                          <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-sm border border-gray-200">
+                            <Image
+                              src="https://media.vietnamplus.vn/images/92ffd2b8d642377b307369f5e8102f61f0a9b91dbbbd28acdc33c8eb3206ac2a7b114f9bb34e41a31ec6c6c5fad3825969675154eac7c5524b200b1101632f29/3004dienbienphu1-2908.jpg"
+                              alt="Minh họa đợt 3"
+                              width={800}
+                              height={1200}
+                              className="w-full h-auto object-contain rounded-lg shadow-lg"
+                            />
+                            <p className="text-sm text-gray-600 text-center mt-3 italic font-medium">
+                              Bộ đội ta tấn công các vị trí xung yếu của địch trên đồi A1. (Ảnh: Tư liệu TTXVN)
+                            </p>
+                          </div>
+
+                          {/* Results section */}
+                          <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-xl border-l-4 border-blue-500 shadow-sm">
+                            <h4 className="font-bold text-[color:var(--brown)] mb-3 text-lg">
+                              Kết quả
+                            </h4>
+                            <p className="text-justify leading-7">
+                              Hệ thống phòng ngự của địch bị phá vỡ từng mảng,
+                              các mũi thọc sâu áp sát trung tâm, tạo thế cho các
+                              trận quyết định đêm 6/5 và ngày 7/5.
+                            </p>
+                          </div>
+                        </div>
+                      ),
+                    },
+                    {
+                      key: "development",
                       label: "Diễn biến",
                       content: (
                         <div className="space-y-6 leading-relaxed text-[color:var(--charcoal)]">
-                          <div className="bg-gradient-to-r from-[color:var(--gold)]/20 to-transparent p-4 rounded-lg border-l-4 border-[color:var(--gold)]">
-                            <p>
+                          {/* Main content section */}
+                          <div className="bg-gradient-to-r from-[color:var(--gold)]/20 to-transparent p-6 rounded-xl border-l-4 border-[color:var(--gold)] shadow-sm">
+                            <p className="text-justify leading-7">
                               Đợt 3 mở màn bằng các đòn tiến công tổng lực, đồng
                               loạt đánh vào các cứ điểm còn lại, đẩy nhanh sự
                               sụp đổ của tập đoàn cứ điểm.
                             </p>
                           </div>
-                          <div className="bg-gray-50 p-4 rounded-lg">
+
+                          {/* Image section */}
+                          <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-sm border border-gray-200">
                             <Image
-                              src="https://hair-salon-fpt.io.vn/uploads/14d5d4e0-a2dc-4a47-ade5-8d186e417790_dai%20tuong%20vo%20nguyen%20giao.jpg"
+                              src="https://media.vietnamplus.vn/images/92ffd2b8d642377b307369f5e8102f61f0a9b91dbbbd28acdc33c8eb3206ac2a7b114f9bb34e41a31ec6c6c5fad3825969675154eac7c5524b200b1101632f29/3004dienbienphu1-2908.jpg"
                               alt="Minh họa đợt 3"
                               width={800}
                               height={1200}
-                              className="w-full h-auto object-contain rounded-lg shadow-md"
+                              className="w-full h-auto object-contain rounded-lg shadow-lg"
                             />
-                            <p className="text-sm text-gray-600 text-center mt-2 italic">
-                              Hình ảnh minh họa đợt tổng công kích
+                            <p className="text-sm text-gray-600 text-center mt-3 italic font-medium">
+                              Bộ đội ta tấn công các vị trí xung yếu của địch trên đồi A1. (Ảnh: Tư liệu TTXVN)
                             </p>
                           </div>
-                          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-                            <h4 className="font-semibold text-[color:var(--brown)] mb-2">
-                              Kết quả
-                            </h4>
-                            <p>
-                              Hệ thống phòng ngự của địch bị phá vỡ từng mảng,
-                              các mũi thọc sâu áp sát trung tâm, tạo thế cho các
-                              trận quyết định đêm 6/5 và ngày 7/5.
+                          
+                        </div>
+                      ),
+                    },
+                    {
+                      key: "results",
+                      label: "Kết quả",
+                      content: (
+                        <div className="space-y-6 leading-relaxed text-[color:var(--charcoal)]">
+                          {/* Main content section */}
+                          <div className="bg-gradient-to-r from-[color:var(--gold)]/20 to-transparent p-6 rounded-xl border-l-4 border-[color:var(--gold)] shadow-sm">
+                            <p className="text-justify leading-7">
+                              Về phía ta: Đã làm chủ hoàn toàn chiến trường Điện Biên Phủ, tiêu diệt và bắt sống toàn bộ lực lượng địch.
+
+                              Về phía địch: Toàn bộ Tập đoàn cứ điểm Điện Biên Phủ bị xóa sổ.
+
+                              Tổn thất sinh lực: Ta đã tiêu diệt và bắt sống 16.200 quân địch.
+
+                              Thiệt hại về quân sự: Bắn rơi và phá hủy 62 máy bay các loại, thu toàn bộ vũ khí, đạn dược và phương tiện chiến tranh của địch.
                             </p>
                           </div>
                         </div>
@@ -1469,21 +1712,38 @@ function VerticalTimeline1() {
                       <div className="space-y-6 leading-relaxed text-[color:var(--charcoal)]">
                         <div className="bg-gradient-to-r from-[color:var(--gold)]/20 to-transparent p-4 rounded-lg border-l-4 border-[color:var(--gold)]">
                           <p>
-                            Ta nổ súng mở màn đợt 3, tấn công đồng loạt các cứ
-                            điểm.
+                            Về phía địch: Ngày 1/5/1954, máy bay địch bắt đầu sử dụng một loại bom mới của Mỹ (Hail Leaflet) chứa hàng nghìn mũi tên rất nhỏ và sắc bén, nhằm gây sát thương đám đông. Loại bom này không gây nguy hiểm cho những người ở trong công sự hoặc dưới chiến hào và khó sử dụng trong những trận đánh khi quân ta và quân địch gần như trộn lẫn vào nhau. Langlais và Bigeard đã điều chỉnh, củng cố lại tổ chức phòng ngự ở khu trung tâm.
+
+                            Những đơn vị khá nhất và những chỉ huy được tin cậy nhất còn lại của tập đoàn cứ điểm được tăng cường cho trung tâm đề kháng Elian. Tại đây, chúng bố trí Tiểu đoàn 2 thuộc Trung đoàn dù thuộc địa số 1, Tiểu đoàn dù xung kích 6, Tiểu đoàn dù ngụy số 5, Tiểu đoàn 1 Bán lữ đoàn lê dương 13 cùng với hai đại đội độc lập, đơn vị công binh và một số lính Algeria, lính Thái. Tuy nhiên, những đơn vị này đều bị tổn thất nhiều, đội hình chắp vá.
+
+                            Về phía ta: 17 giờ ngày 1/5/1954, bất thần tất cả các cỡ pháo của ta nhả đạn vào nhiều khu vực của tập đoàn cứ điểm. Lần này cụm pháo địch ở Hồng Cúm bị kiềm chế, tê liệt. Một kho đạn với 3.000 viên đạn dự trữ của địch bị nổ tung. Kho lương thực, thực phẩm bốc cháy. Đợt pháo kích kéo dài gần một giờ. Dứt tiếng pháo, các đơn vị đồng loạt tiến đánh nhiều vị trí.
+
+                            Tại phía Đông, Trung đoàn 98 tiến công cứ điểm C1 lần thứ hai. Địch vẫn đặt sở chỉ huy trên C2 và linh cảm trận đánh C1 sắp nổ ra. Ngày 1/5, địch quyết định đưa Đại đội 3 thuộc Tiểu đoàn dù tiêm kích số 2 lên thay thế cho Đại đội Clédic đã bị tiêu hao, đồng thời ra lệnh cho Đại đội 1 sẵn sàng tham gia phản kích.
+
+                            Đại đội 811 của ta đã có 20 ngày đêm phòng ngự tại C1, được lệnh rời khỏi trận địa 200m cho hỏa pháo chuẩn bị. Đại đội trưởng Lê Văn Dỵ thấy công sự đã được củng cố vững chắc, đủ sức chịu đựng đạn pháo và tin vào sự chính xác của pháo binh ta nên quyết định chỉ cho bộ phận dự bị lui về phía sau, toàn đơn vị vẫn bám trận địa để không lỡ thời cơ xung phong.
+                            Những cao điểm ta chiếm được ở khu Đông phát huy tác dụng. Sơn pháo đặt trên đồi D1 nhắm từng hỏa điểm trên C1 bắn rất chính xác. Những trận đánh giáp lá cà diễn ra. Quân địch ở C1 mất dần sức chiến đấu. Có tên phủ bạt lên người nằm giả chết, chờ tiếng súng yên sẽ đầu hàng. Nửa đêm, toàn bộ quân địch bị tiêu diệt. Dây thép gai và mìn lấy từ trận địa của địch lập tức được rải ra sườn đồi thành một bãi chướng ngại vật dày đặc, đề phòng quân địch phản kích.
                           </p>
-                        </div>
-                        <div className="bg-gray-50 p-4 rounded-lg">
+
                           <Image
-                            src="https://hair-salon-fpt.io.vn/uploads/14d5d4e0-a2dc-4a47-ade5-8d186e417790_dai%20tuong%20vo%20nguyen%20giao.jpg"
+                            src="https://bcp.cdnchinhphu.vn/thumb_w/777/334894974524682240/2024/5/2/47-luoc-do-cu-diem-c1-1714615182618470558387.jpg"
                             alt="Minh họa đêm 1/5"
                             width={800}
                             height={1200}
                             className="w-full h-auto object-contain rounded-lg shadow-md"
                           />
-                          <p className="text-sm text-gray-600 text-center mt-2 italic">
-                            Hình ảnh minh họa đêm 1/5
+                          <p>
+                            Sau hơn 30 ngày đêm liên tục chiến đấu, trận đánh tại C1 lúc này đã kết thúc. C2 nằm gọn dưới nòng pháo không giật của ta. Trời sáng, không thấy quân phản kích của địch. Chỉ có những khẩu trọng liên bốn nòng đặt tại Sở chỉ huy của De Castries lồng lộn tuôn đạn về phía trận địa ta trên đỉnh đồi như muốn ngăn chặn một đợt xung phong.
+
+                            Ở phía Đông sông Nậm Rốm, Tiểu đoàn 166 và Tiểu đoàn 154 thuộc Trung đoàn 209 tiến công các cứ điểm 505 và 505A. Một đại đội của Tiểu đoàn lê dương dù 6 và những đơn vị lính Algeria, lính Thái tại đây, do viên Tiểu đoàn trưởng Chenel chỉ huy, chống cự khá quyết liệt. Ta và địch giành giật nhau từng ụ súng, từng chiến hào. 2 giờ ngày 2/5, Trung đoàn 209 tiêu diệt hoàn toàn hai cứ điểm này, chấm dứt sự tồn tại của trung tâm đề kháng Dominique.
+
+                            Trên cánh đồng phía Tây, trận đánh tiêu diệt cứ điểm 811A của Trung đoàn 88 diễn ra rất nhanh chóng. Chiến thuật đánh lấn tiếp tục được phát huy. Với những đường hào đã đào xuyên qua hàng rào cứ điểm, bộ đội ta bất thần tổ chức xung phong. Toàn bộ Đại đội Âu Phi vừa tới thay quân để tăng cường phòng thủ cứ điểm này, bị diệt gọn trong vòng chưa đầy 80 phút.
+
+                            Như vậy, ngay trong đêm đầu của đợt tiến công thứ 3, địch đã mất thêm 4 cứ điểm: C1, 505, 505A ở phía Đông và 311A ở phía Tây. Tại Hồng Cúm, trận vây ép đánh lấn khu C của Trung đoàn 57 đã tiêu hao nhiều binh lực địch, nên sáng 2/5, địch phải rút chạy khỏi đây.
+
+                            Những đường hào thọc sâu của bộ đội ta trên cánh đồng phía Tây, đều nhắm thẳng về phía Sở chỉ huy De Castries. Tập đoàn cứ điểm đã bị dồn lại trong cái "ô vuông" cuối cùng.
                           </p>
+                        </div>
+                        <div className="bg-gray-50 p-4 rounded-lg">
                         </div>
                         <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
                           <h4 className="font-semibold text-[color:var(--brown)] mb-2">
@@ -1547,22 +1807,25 @@ function VerticalTimeline1() {
                       <div className="space-y-6 leading-relaxed text-[color:var(--charcoal)]">
                         <div className="bg-gradient-to-r from-[color:var(--gold)]/20 to-transparent p-4 rounded-lg border-l-4 border-[color:var(--gold)]">
                           <p>
-                            Trận quyết định ở A1: ta đào hầm đặt gần 1 tấn thuốc
-                            nổ. 20h30 ngày 6/5, kích nổ làm sập một phần phòng
-                            ngự; các mũi xung phong chiếm toàn bộ A1, mở toang
-                            cánh cửa vào trung tâm.
+                            Trong hoàn cảnh hiểm nguy, nổi bật lên nhiều tấm gương anh hùng. Đó là Trung đoàn trưởng Hùng Sinh gan dạ, bình tĩnh trực tiếp chiến đấu cùng với chiến sỹ đánh lui nhiều đợt phản kích của quân Pháp.
+
+                            Đó là chiến sỹ điện thanh Chu Văn Mùi, lẻ loi một mình trên đỉnh đồi, không một hạt cơm vào bụng, vẫn tiếp tục cuộc chiến đấu kỳ lạ: vừa đánh địch, bảo vệ thương binh, vừa dùng máy điện thanh chỉ mục tiêu cho pháo ta diệt địch.
+
+                            Đó là Đại đội trưởng Bảo Sằng (tức Quang Long), một thanh niên xứ Huế xuất thân hoàng tộc, đã chỉ huy đại đội chiến đấu đến người cuối cùng và anh dũng hy sinh.
+
+                            Đêm ngày 6/5/1954, tại đồi A1 trận chiến đấu giữa ta và địch diễn ra quyết liệt, quân ta ào ạt xông lên tiêu diệt các lô cốt và dùng thuốc nổ phá các hầm ngầm kiên cố của địch. Tên quan Tư chỉ huy đồi A1 và khoảng 400 tên địch còn sống sót đã phải đầu hàng.
                           </p>
                         </div>
                         <div className="bg-gray-50 p-4 rounded-lg">
                           <Image
-                            src="https://hair-salon-fpt.io.vn/uploads/14d5d4e0-a2dc-4a47-ade5-8d186e417790_dai%20tuong%20vo%20nguyen%20giao.jpg"
+                            src="https://media.baobinhphuoc.com.vn/upload/news/5_2024/1_06054307052024.jpg"
                             alt="Minh họa đêm 6/5"
                             width={800}
                             height={1200}
                             className="w-full h-auto object-contain rounded-lg shadow-md"
                           />
                           <p className="text-sm text-gray-600 text-center mt-2 italic">
-                            Hình ảnh minh họa trận đánh A1
+                            Đêm ngày 6-5, tại đồi A1 trận chiến đấu giữa ta và địch diễn ra quyết liệt, quân ta xông lên tiêu diệt từng lô cốt, nổ phá từng hầm ngầm. Trong ảnh: Đồi A1 bị ta tiêu diệt. Ảnh: Tư liệu TTXVN
                           </p>
                         </div>
                         <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
@@ -1628,21 +1891,22 @@ function VerticalTimeline1() {
                       <div className="space-y-6 leading-relaxed text-[color:var(--charcoal)]">
                         <div className="bg-gradient-to-r from-[color:var(--gold)]/20 to-transparent p-4 rounded-lg border-l-4 border-[color:var(--gold)]">
                           <p>
-                            Ta tiến công trên toàn mặt trận, đánh thẳng vào sở
-                            chỉ huy Mường Thanh. 17h30: Tướng De Castries và
-                            toàn bộ Bộ tham mưu bị bắt sống tại hầm chỉ huy.
+                            17 giờ 30 phút ngày 07/5/1954, ta chiếm sở chỉ huy của địch, tướng Đờ Cát cùng toàn bộ Bộ Tham mưu và binh lính tập đoàn cứ điểm Điện Biên Phủ phải ra hàng. Lá cờ "quyết chiến, quyết thắng" của quân đội ta tung bay trên nóc hầm chỉ huy của địch.
+
+                            Ngay trong đêm đó quân ta tiếp tục tiến công phân khu Nam, đánh địch tháo chạy về Thượng Lào, đến 24 giờ toàn bộ quân địch đã bị bắt làm tù binh.
+
                           </p>
                         </div>
                         <div className="bg-gray-50 p-4 rounded-lg">
                           <Image
-                            src="https://hair-salon-fpt.io.vn/uploads/14d5d4e0-a2dc-4a47-ade5-8d186e417790_dai%20tuong%20vo%20nguyen%20giao.jpg"
+                            src="https://media.baobinhphuoc.com.vn/upload/news/5_2024/2_06062607052024.jpg"
                             alt="Minh họa ngày 7/5"
                             width={800}
                             height={1200}
                             className="w-full h-auto object-contain rounded-lg shadow-md"
                           />
                           <p className="text-sm text-gray-600 text-center mt-2 italic">
-                            Hình ảnh minh họa ngày 7/5
+                            Chiều 7-5-1954, lá cờ "Quyết chiến - Quyết thắng" của Quân đội nhân dân Việt Nam tung bay trên nóc hầm tướng De Castries. Chiến dịch lịch sử Điện Biên Phủ đã toàn thắng. Ảnh: Tư liệu TTXVN
                           </p>
                         </div>
                         <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
@@ -1650,9 +1914,7 @@ function VerticalTimeline1() {
                             Kết quả
                           </h4>
                           <p>
-                            Toàn bộ tập đoàn cứ điểm Điện Biên Phủ đầu hàng;
-                            tướng De Castries bị bắt sống. Chiến dịch toàn
-                            thắng, tạo bước ngoặt lịch sử cho cuộc kháng chiến.
+                            Sau 55 ngày đêm chiến đấu dũng cảm, mưu trí, sáng tạo, quân và dân ta đã đập tan toàn bộ Tập đoàn cứ điểm Điện Biên Phủ, tiêu diệt và bắt sống 16.200 tên, bắn rơi 62 máy bay, thu 64 ô tô và toàn bộ vũ khí, đạn dược, quân trang quân dụng của địch.
                           </p>
                         </div>
                       </div>
