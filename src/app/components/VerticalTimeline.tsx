@@ -36,17 +36,17 @@ function VerticalTimeline1() {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{
-              background: "rgba(0, 0, 0, 0.8)",
+              background: "rgba(0, 0, 0, 0.39)",
               color: "#fff",
-              boxShadow: "0 3px 0 #EAB308",
+              boxShadow: "0 3px 0 #e7e2e2ff",
             }}
             contentArrowStyle={{ borderRight: "7px solid rgba(0, 0, 0, 0.8)" }}
             date="13/3 - 17/3/1954"
             dateClassName="text-white font-bold text-lg"
             iconStyle={{
-              background: "#EAB308",
+              background: "rgba(255, 0, 0, 1)",
               color: "#fff",
-              boxShadow: "0 0 0 4px #EAB308",
+              boxShadow: "0 0 0 4px #ff0000ff",
             }}
             // icon={<WorkIcon />}
           >
@@ -841,17 +841,17 @@ function VerticalTimeline1() {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{
-              background: "rgba(0, 0, 0, 0.8)",
+              background: "rgba(0, 0, 0, 0.39)",
               color: "#fff",
-              boxShadow: "0 3px 0 #EAB308",
+              boxShadow: "0 3px 0 #e7e2e2ff",
             }}
             contentArrowStyle={{ borderRight: "7px solid rgba(0, 0, 0, 0.8)" }}
             date="30/3 – 30/4/1954"
             dateClassName="text-white font-bold text-lg"
             iconStyle={{
-              background: "#EAB308",
+              background: "#ff0000ff",
               color: "#fff",
-              boxShadow: "0 0 0 4px #EAB308",
+              boxShadow: "0 0 0 4px #ff0000ff",
             }}
             // icon={<WorkIcon />}
           >
@@ -1202,17 +1202,17 @@ function VerticalTimeline1() {
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             contentStyle={{
-              background: "rgba(0, 0, 0, 0.8)",
+              background: "rgba(0, 0, 0, 0.39)",
               color: "#fff",
-              boxShadow: "0 3px 0 #EAB308",
+              boxShadow: "0 3px 0 #e7e2e2ff",
             }}
             contentArrowStyle={{ borderRight: "7px solid rgba(0, 0, 0, 0.8)" }}
             date="1/5 – 7/5/1954"
             dateClassName="text-white font-bold text-lg"
             iconStyle={{
-              background: "#EAB308",
+              background: "#ff0000ff",
               color: "#fff",
-              boxShadow: "0 0 0 4px #EAB308",
+              boxShadow: "0 0 0 4px #ff0000ff",
             }}
             // icon={<WorkIcon />}
           >
@@ -1371,7 +1371,7 @@ function VerticalTimeline1() {
             }}
           >
             <h1 className="text-lg sm:text-xl font-semibold text-white">
-              Quân ta đánh trận quyết định ở đồi A1:
+              Quân ta đánh trận quyết định ở đồi A1
             </h1>
 
             <div className="mt-3 relative w-full">
