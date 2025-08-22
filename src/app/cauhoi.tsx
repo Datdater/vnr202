@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 
 const HTMLFlipBook = ({
   children,
   ...props
 }: {
   children: React.ReactNode;
-  [key: string]: any;
+  [key: string]: unknown;
 }) => {
   const [currentPage, setCurrentPage] = useState(0);
   const totalPages = React.Children.count(children);
@@ -101,7 +100,6 @@ type QuizQuestionProps = {
   onAnswer: (answerIndex: number) => void;
   userAnswer?: number;
   hasAnswered: boolean;
-  onReset?: () => void;
 };
 
 const QuizQuestion = ({
@@ -111,7 +109,6 @@ const QuizQuestion = ({
   onAnswer,
   userAnswer,
   hasAnswered,
-  onReset,
 }: QuizQuestionProps) => {
   return (
     <div className="space-y-4">
@@ -303,33 +300,8 @@ const SurplusValueQuizBook = () => {
     }
   };
 
-  const resetAnswer = (questionIndex: number) => {
-    setAnswers((prev) => {
-      const newAnswers = { ...prev };
-      delete newAnswers[questionIndex];
-      return newAnswers;
-    });
-    setHasAnswered((prev) => {
-      const newResults = { ...prev };
-      delete newResults[questionIndex];
-      return newResults;
-    });
-  };
+  
 
-  const resetQuiz = () => {
-    setAnswers({});
-    setHasAnswered({});
-  };
-
-  const calculateScore = () => {
-    let correct = 0;
-    questions.forEach((question, index) => {
-      if (hasAnswered[index] && answers[index] === question.correctAnswer) {
-        correct++;
-      }
-    });
-    return correct;
-  };
 
   return (
     <div
@@ -398,7 +370,6 @@ const SurplusValueQuizBook = () => {
                     onAnswer={(answerIndex) => handleAnswer(index, answerIndex)}
                     userAnswer={answers[index]}
                     hasAnswered={hasAnswered[index] || false}
-                    onReset={() => resetAnswer(index)}
                   />
                 </div>
                 {/* Image (Right - takes 2 columns) */}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Maximize2, Minimize2, RotateCcw, Info, Eye } from "lucide-react";
+import { Maximize2, Minimize2, Info } from "lucide-react";
 
 const SketchfabEmbed: React.FC = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -105,8 +105,8 @@ const SketchfabEmbed: React.FC = () => {
           title="Cụm tượng chiến thắng Điện Biên Phủ"
           frameBorder="0"
           allowFullScreen
-          mozallowfullscreen="true"
-          webkitallowfullscreen="true"
+          // mozallowfullscreen="true"
+          // webkitallowfullscreen="true"
           allow="autoplay; fullscreen; xr-spatial-tracking"
           src="https://sketchfab.com/models/050b006020fa4b9985b6cc352f49e1dc/embed?autostart=1&ui_theme=dark&ui_controls=1&ui_infos=1&ui_inspector=1&ui_stop=1&ui_watermark=1&ui_watermark_link=1"
           className={`

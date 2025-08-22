@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 function PreprationPhase() {
   return (
     <>

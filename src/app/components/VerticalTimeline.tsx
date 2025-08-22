@@ -73,8 +73,8 @@ function VerticalTimeline1() {
                         <div className="space-y-4 leading-relaxed text-[color:var(--charcoal)]">
                           <div className="bg-gradient-to-r from-[color:var(--gold)]/20 to-transparent p-4 rounded-lg border-l-4 border-[color:var(--gold)]">
                             <p>
-                              Bộ Chỉ huy chuyển phương châm từ "đánh nhanh,
-                              thắng nhanh" sang <b>"đánh chắc, tiến chắc"</b> để
+                              Bộ Chỉ huy chuyển phương châm từ đánh nhanh,
+                              thắng nhanh sang <b>đánh chắc, tiến chắc</b> để
                               bảo đảm thắng lợi bền vững.
                             </p>
                           </div>
@@ -88,8 +88,8 @@ function VerticalTimeline1() {
                                 <ul className="list-disc pl-5 space-y-1 text-sm">
                                   <li>
                                     Ba cụm cứ điểm:{" "}
-                                    <b>Him Lam – Độc Lập – Bản Kéo</b> ("lá
-                                    chắn" vòng ngoài).
+                                    <b>Him Lam – Độc Lập – Bản Kéo</b> (lá
+                                    chắn vòng ngoài).
                                   </li>
                                   <li>
                                     Liên kết hỏa lực, công sự vững chắc, yểm trợ
@@ -149,8 +149,8 @@ function VerticalTimeline1() {
                                 className="w-full h-auto object-contain rounded"
                               />
                               <p className="text-xs text-gray-600 text-center mt-2 italic">
-                                Chỉ đạo chiến dịch: giữ vững phương châm "đánh
-                                chắc, tiến chắc"
+                                Chỉ đạo chiến dịch: giữ vững phương châm đánh
+                                chắc, tiến chắc
                               </p>
                             </div>
                           </div>
@@ -204,7 +204,7 @@ function VerticalTimeline1() {
                         <div className="space-y-4 leading-relaxed text-[color:var(--charcoal)]">
                           <p>
                             Đợt 1 mở màn chiến dịch với các đòn đánh nhanh,
-                            chắc, nhằm phá vỡ "lá chắn" phía Bắc (Him Lam – Độc
+                            chắc, nhằm phá vỡ lá chắn phía Bắc (Him Lam – Độc
                             Lập – Bản Kéo), mở cửa vào trung tâm Mường Thanh.
                           </p>
 
@@ -440,7 +440,7 @@ function VerticalTimeline1() {
                         {/* Quote Section */}
                         <div className="bg-amber-50 p-6 rounded-lg border-l-4 border-amber-500">
                           <div className="flex items-start space-x-3">
-                            <div className="text-amber-600 text-2xl">"</div>
+                            <div className="text-amber-600 text-2xl">“</div>
                             <div className="flex-1">
                               <p className="text-sm text-gray-600 mb-2">
                                 <strong>Hạ sĩ Kubiak</strong> - người sống sót
@@ -448,7 +448,7 @@ function VerticalTimeline1() {
                                 màn chiều ngày 13-3-1954:
                               </p>
                               <blockquote className="italic text-[color:var(--charcoal)] leading-relaxed">
-                                "Vào lúc đó, dập một cái, ngày tận thế đã đến...
+                                Vào lúc đó, dập một cái, ngày tận thế đã đến...
                                 Béatrice bay đi, tan thành bụi. Quanh tôi đất đá
                                 tung lên, những người lính lê dương gục xuống,
                                 bị thương và chết nằm la liệt. Tất cả đều kinh
@@ -456,10 +456,10 @@ function VerticalTimeline1() {
                                 nhiều pháo đến thế, có thể bắn mạnh đến thế. Đạn
                                 đại bác trút xuống không ngừng như một trận mưa
                                 đá bất thần buổi chiều thu. Lô cốt, đường hào
-                                nối tiếp nhau đè bẹp, chôn vùi người và vũ khí".
+                                nối tiếp nhau đè bẹp, chôn vùi người và vũ khí.
                               </blockquote>
                             </div>
-                            <div className="text-amber-600 text-2xl">"</div>
+                            <div className="text-amber-600 text-2xl">“</div>
                           </div>
                         </div>
                         {/* Heroic Stories Section */}
@@ -488,9 +488,9 @@ function VerticalTimeline1() {
                                 </p>
                                 <div className="bg-white/50 p-3 rounded border-l-3 border-red-400">
                                   <p className="text-sm text-gray-700 italic">
-                                    "Lấy thân mình lấp lỗ châu mai để quân ta
+                                    Lấy thân mình lấp lỗ châu mai để quân ta
                                     chớp thời cơ, xông lên tiêu diệt cứ điểm Him
-                                    Lam, giành thắng lợi trong trận mở màn"
+                                    Lam, giành thắng lợi trong trận mở màn.
                                   </p>
                                 </div>
                               </div>
@@ -513,8 +513,8 @@ function VerticalTimeline1() {
                                 </h4>
                                 <p className="text-[color:var(--charcoal)] leading-relaxed">
                                   Trong chiến dịch này đã xuất hiện nhiều tấm
-                                  gương dũng cảm, mưu trí "gan không núng, chí
-                                  không mòn". Đó là hình ảnh Anh hùng Tô Vĩnh
+                                  gương dũng cảm, mưu trí gan không núng, chí
+                                  không mòn. Đó là hình ảnh Anh hùng Tô Vĩnh
                                   Diện hy sinh thân mình để cứu khẩu pháo.
                                 </p>
                               </div>
@@ -1056,7 +1056,7 @@ function VerticalTimeline1() {
             }}
           >
             <h1 className="text-lg sm:text-xl font-semibold text-white">
-              Chiến thuật "vây lấn" bằng đào hào
+              Chiến thuật vây lấn bằng đào hào
             </h1>
 
             <div className="mt-3 relative w-full">

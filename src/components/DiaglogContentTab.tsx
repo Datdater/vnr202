@@ -156,7 +156,7 @@ export default function DiaglogContentTab({
                   aria-label="Tabs"
                   onKeyDown={handleTabsKeyDown}
                 >
-                  {tabsToRender.map((tab, index) => {
+                  {tabsToRender.map((tab) => {
                     const isActive = activeTab.key === tab.key
                     return (
                       <button

@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import {
-  Star,
   Flag,
   Crown,
   FileText,
-  Award,
   ChevronUp,
   ChevronDown,
   TrendingUp,
@@ -71,11 +69,7 @@ const KetQuaPage: React.FC = () => {
     },
   ];
 
-  const prevImage = () => {
-    setCurrentImageIndex(
-      (prev) => (prev - 1 + memorialImages.length) % memorialImages.length
-    );
-  };
+
   const images: ImageData[] = [
     {
       src: "https://hoinongdanhatinh.vn/uploads/news/2024_05/ham-do-cat.jpg",
@@ -248,7 +242,7 @@ const KetQuaPage: React.FC = () => {
                   Kết quả chiến dịch Điện Biên Phủ
                 </h2>
                 <p className="text-lg md:text-xl text-white font-medium drop-shadow-sm">
-                  Chiến thắng "lừng lẫy năm châu, chấn động địa cầu."
+                  Chiến thắng lừng lẫy năm châu, chấn động địa cầu.
                 </p>
               </div>
               <div className="prose prose-lg max-w-none">

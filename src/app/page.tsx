@@ -1,11 +1,7 @@
 "use client";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-import HTMLFlipBook from "react-pageflip";
-import DiaglogContentTab from "@/components/DiaglogContentTab";
-import { Bar } from "react-chartjs-2";
 
 import {
   Chart as ChartJS,
@@ -17,8 +13,6 @@ import {
   LineController,
   Legend,
   Tooltip,
-  ChartData,
-  ChartOptions,
 } from "chart.js";
 import VerticalTimeline1 from "./components/VerticalTimeline";
 import PreprationPhase from "./components/PreprationPhase/PreprationPhase";
@@ -269,77 +263,6 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isManualScrolling]);
 
-  const chartData: ChartData<"bar"> = {
-    labels: [
-      "2010",
-      "2011",
-      "2012",
-      "2013",
-      "2014",
-      "2015",
-      "2016",
-      "2017",
-      "2018",
-      "2019",
-      "2020",
-      "2021",
-      "2022",
-      "2023",
-      "2024",
-    ],
-    datasets: [
-      {
-        type: "bar",
-        label: "Năng suất lao động (triệu đồng/người)",
-        data: [
-          55.8, 70, 78.8, 85.2, 93.1, 97.7, 105.7, 117.2, 129.1, 141, 150.1,
-          173, 188.7, 199.3, 221.9,
-        ],
-        backgroundColor: "rgba(54, 162, 235, 0.7)",
-        borderRadius: 6,
-        yAxisID: "y",
-      },
-      {
-        type: "bar",
-        label: "Tỷ lệ lao động qua đào tạo (%)",
-        data: [
-          14.6, 15.4, 16.5, 17.9, 18.3, 20.1, 20.5, 21.3, 21.9, 22.6, 25, 26.1,
-          26.3, 27.1, 28.3,
-        ],
-        borderColor: "orange",
-        backgroundColor: "orange",
-        yAxisID: "y1",
-        order: 2,
-      },
-    ],
-  };
-
-  const chartOptions: ChartOptions<"bar"> = {
-    responsive: true,
-    plugins: {
-      legend: { position: "top" },
-      title: {
-        display: true,
-        text: "Năng suất lao động và tỷ lệ lao động qua đào tạo ở Việt Nam (2010-2024)",
-        font: { size: 18 },
-      },
-    },
-    scales: {
-      y: {
-        type: "linear",
-        position: "left",
-        title: { display: true, text: "Triệu đồng/người" },
-      },
-      y1: {
-        type: "linear",
-        position: "right",
-        grid: { drawOnChartArea: false },
-        title: { display: true, text: "Tỷ lệ (%)" },
-        min: 0,
-        max: 30,
-      },
-    },
-  };
 
   return (
     <div className="min-h-screen bg-[color:var(--background)] text-[color:var(--charcoal)] font-serif">
