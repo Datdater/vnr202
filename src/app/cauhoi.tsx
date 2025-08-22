@@ -27,8 +27,8 @@ const HTMLFlipBook = ({
       className="relative"
       style={{
         width: "70%",
-        height: props.height || 800,
         margin: "0 auto",
+        height: "800px",
       }}
     >
       <div className="relative w-[100%] h-[720] bg-white shadow-2xl rounded-xl overflow-hidden border border-gray-200">
